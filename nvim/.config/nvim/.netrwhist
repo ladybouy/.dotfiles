@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/jeffrey/Scripts/source'
+let g:netrw_dirhist_6='/home/jeffrey/Programming/C/KR'
+let g:netrw_dirhist_5='/home/jeffrey/Programming/C/Practice'
+let g:netrw_dirhist_4='/home/jeffrey/Programming/C/KR/Examples/Ch5/Command-Line'
+let g:netrw_dirhist_3='/home/jeffrey/Programming/C/KR/Examples/Ch5'
+let g:netrw_dirhist_2='/home/jeffrey/Programming/C/KR/Examples'
+let g:netrw_dirhist_1='/home/jeffrey/Programming/C/KR'
+let g:netrw_dirhist_0='/home/jeffrey/Programming/C/KR/Examples/Ch5/Command-Line'
+let g:netrw_dirhist_9='/home/jeffrey/Programming/C/KR/Examples/Ch5'
+let g:netrw_dirhist_8='/home/jeffrey/Programming/C/KR/Examples'
