@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PROJECT=$1
+FOLDERARRAY=(Source Header Resource External)
+
+if [ ! -d $PROJECT ]; then 
+    mkdir $PROJECT 
+fi
+
+cd $PROJECT 
+
+for FOLDER in ${FOLDERARRAY[*]}; do
+    mkdir -p $FOLDER
+done

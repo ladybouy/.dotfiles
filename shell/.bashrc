@@ -1,6 +1,6 @@
 # ~/.bashrc
 
-PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:/home/jeffrey/.scripts:/home/jeffrey/.scripts/bin:/home/jeffrey/.scripts/Shell:/home/jeffrey/.scripts/Python
+PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/Shell:$HOME/.scripts/Python
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
 
@@ -8,14 +8,13 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=/bin/vim
 export VISUAL=/bin/vim
-VIMINIT="source ~/.vim/vimrc"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls -lh --color=auto'
 alias grep='grep --color=auto' 
-alias suckless='cd /home/jeffrey/.config/suckless'
+alias suckless='cd $HOME/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'
 
@@ -23,14 +22,14 @@ PS1='\[\033[01;34m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h \[\033[01;37m\]\W\[\033[
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jeffrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jeffrey/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jeffrey/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jeffrey/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
