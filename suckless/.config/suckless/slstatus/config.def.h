@@ -71,8 +71,8 @@ static const struct arg args[] = {
 //	{ run_command,	       " %1s ",							"sb-internet"},
     { run_command,         " %1s ",                         "volume.sh"  },
     { battery_state,       " %s ",                          "BAT1"       },
-	{ battery_perc,        "^c#ebdbb2^%s%% ",               "BAT1"       },
-	{ battery_remaining,   "%s",                            "BAT1"       },
-	{ datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %d %B %Y"},
-	{ datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %R "       },
+    { battery_perc,        "^c#ebdbb2^%s%% ",               "BAT1"       },
+    { battery_remaining,   "%s",                            "BAT1"       },
+    { datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %d %B %Y"},
+    { datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %R "       },
 };
