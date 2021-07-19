@@ -17,6 +17,7 @@ alias grep='grep --color=auto'
 alias suckless='cd $HOME/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'
+alias INSTALL='cd $HOME/Documents/Install'
 
 PS1='\[\033[01;34m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h \[\033[01;37m\]\W\[\033[0m\] \$ \[\033[m\]'
 

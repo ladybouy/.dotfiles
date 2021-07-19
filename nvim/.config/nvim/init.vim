@@ -23,12 +23,12 @@ set wildmenu
 "============== Plugins =============== 
 call plug#begin('~/.config/nvim/plugged')
 "Themes 
-	Plug 'morhetz/gruvbox'			 "gruvbox
+	Plug 'morhetz/gruvbox'            "gruvbox
     Plug 'sainnhe/gruvbox-material'  "gruvbox-material
     Plug 'arcticicestudio/nord-vim'  "nord
     Plug 'sainnhe/everforest'
 "Functionality
-    Plug 'tpope/vim-surround'        
+    Plug 'tpope/vim-surround'
     Plug 'vim-airline/vim-airline' 
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
@@ -55,7 +55,6 @@ let g:gruvbox_material_enable_bold = 1
 let g:airline_theme='gruvbox_material'
 set background=dark
 colorscheme gruvbox-material
-
 
 "Tree Sitter setup 
 lua << EOF
