@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FOLDER_ARRAY=(dwm st dmenu slock)
+
+for FOLDER in ${FOLDER_ARRAY[*]}; do
+    cd $HOME/.config/suckless/${FOLDER}
+    make clean
+done
