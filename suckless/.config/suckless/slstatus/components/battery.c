@@ -52,7 +52,7 @@
 		} map[] = {
 			{ "Charging",    "^c#d79921^" },
 			{ "Discharging", "^c#d79921^" },
-			{ "Full",        "^c#d79921^" },      /*used to be "o" */
+			{ "Full",        "^c#d79921^" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -70,7 +70,7 @@
 				break;
 			}
 		}
-		return (i == LEN(map)) ? "?" : map[i].symbol;
+		 return (i == LEN(map)) ? "^c#d79921^" : map[i].symbol; 
 	}
 
 	const char *
