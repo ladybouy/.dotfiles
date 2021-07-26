@@ -7,10 +7,10 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel		= 0; 
-static const char *fonts[]          = {"Source Code Pro:style=regular:size=10", 
+static const char *fonts[]          = {"Source Code Pro:style=Regular:size=10", 
                                        "siji:size=10", 
                                        "Symbols Nerd Font:size=10"};
-static const char dmenufont[]       = "Source Code Pro:style=regular:size=10";
+static const char dmenufont[]       = "Source Code Pro:style=Regular:size=10";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
 static const char selBG[]           = "#d8a657";

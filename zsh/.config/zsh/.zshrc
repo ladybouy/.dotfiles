@@ -1,3 +1,4 @@
+#~/.config/zsh/.zshrc
 
 PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:/home/jeffrey/.scripts:/home/jeffrey/.scripts/bin:/home/jeffrey/.scripts/Shell:/home/jeffrey/.scripts/Python
 
@@ -16,6 +17,17 @@ alias suckless='cd /home/jeffrey/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'
 
+RANGER_LOAD_DEFAULT_RC=FALSE 
+
+## less display colors
+#export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
+#export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
+#export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
+#export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
+#export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
+#export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
+#export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/jeffrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -30,16 +42,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-RANGER_LOAD_DEFAULT_RC=FALSE 
-
-## less display colors
-#export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
-#export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
-#export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
-#export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
-#export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
-#export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
-#export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 
 echo "ZSH settings loaded"
