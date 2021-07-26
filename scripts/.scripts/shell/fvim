@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FILE=$1
+
+st -e vim ${FILE} & disown

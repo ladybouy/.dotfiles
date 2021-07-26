@@ -1,8 +1,9 @@
-sw_volume: 98
+sw_volume: 92
 audio_device_state:1:pulse audio
 audio_device_state:1:mpd_fifo
-state: stop
-current: 1
+state: pause
+current: 4
+time: 130.635000
 random: 0
 repeat: 1
 single: 0
@@ -11,14 +12,52 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Nerve/After_The_Flare/Nerve-After_The_Flare-01_A1.wav
-1:Nerve/After_The_Flare/Nerve-After_The_Flare-02_A2.wav
-2:Nerve/After_The_Flare/Nerve-After_The_Flare-03_A3.wav
-3:Nerve/After_The_Flare/Nerve-After_The_Flare-04_A4.wav
-4:Nerve/After_The_Flare/Nerve-After_The_Flare-05_A5.wav
-5:Nerve/After_The_Flare/Nerve-After_The_Flare-06_A6.wav
-6:Nerve/After_The_Flare/Nerve-After_The_Flare-07_B1.wav
-7:Nerve/After_The_Flare/Nerve-After_The_Flare-08_B2.wav
-8:Nerve/After_The_Flare/Nerve-After_The_Flare-09_B3.wav
-9:Nerve/After_The_Flare/Nerve-After_The_Flare-11_B5.wav
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0010
+Range: 1512000-1704000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0011
+Range: 1704000-1884000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0008
+Range: 1176000-1296000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0007
+Range: 960000-1176000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0006
+Range: 744000-960000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0005
+Range: 660000-744000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0004
+Range: 492000-660000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0012
+Range: 1884000-2088000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0013
+Range: 2088000-2232000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0014
+Range: 2232000-2460000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0015
+Range: 2460000-2664000
+mtime: 1495510682
+song_end
+song_begin: Footwork/Impulse-Footwork_and_Juke_Mix.cue/track0001
+Range: 0-180000
+mtime: 1495510682
+song_end
 playlist_end

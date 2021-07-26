@@ -39,7 +39,7 @@ fi
 export QT_QPA_PLATFORMTHEME=qt5ct 
 
 # Resolution 
-xrandr --output HDMI-0 --same-as LVDS-0 
+xrandr --output HDMI-1 --same-as eDP-1 
 
 # Key Binds
 xbindkeys
