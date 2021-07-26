@@ -9,14 +9,17 @@ static unsigned int border_width = 0;
 static const unsigned int alpha = 235;
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"monospace:size=10"
+	"Source Code Pro:style=Regular:size=10"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#ebdbb2", "#1d2021" },
 	[SchemeSel] = { "#282828", "#d8a657" },
+	[SchemeSelHighlight] = { "#1d2021", "#ea6962" },
+	[SchemeNormHighlight] = { "#ea6962", "#1d2021" },
 	[SchemeOut] = { "#000000", "#00ffff" },
+	[SchemeOutHighlight] = { "#ffc978", "#00ffff" },
 };
 
 static const unsigned int alphas[SchemeLast][2] = {

@@ -7,8 +7,10 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel		= 0; 
-static const char *fonts[]          = {"Hack-Regular:size=7", "siji:size=7", "Symbols Nerd Font:size=7"};
-static const char dmenufont[]       = "Hack-Regular:size=7";
+static const char *fonts[]          = {"Source Code Pro:style=regular:size=10", 
+                                       "siji:size=10", 
+                                       "Symbols Nerd Font:size=10"};
+static const char dmenufont[]       = "Source Code Pro:style=regular:size=10";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
 static const char selBG[]           = "#d8a657";
@@ -58,7 +60,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "20", "-m", dmenumon, "-fn", dmenufont, "-nb", normBG, "-nf", normFG, "-sb", borderColor, "-sf", normBG, NULL};
+static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-m", dmenumon, "-fn", dmenufont, "-nb", normBG, "-nf", normFG, "-sb", borderColor, "-sf", normBG, NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *snip[] = { "flameshot", "gui", NULL};
 static const char *lock[] = { "slock", NULL}; 
