@@ -2,3 +2,4 @@ mpd/.config/mpd/pid
 mpd/.config/mpd/state
 nvim/.config/nvim/plugged
 vim/.config/plugged
+*.o
