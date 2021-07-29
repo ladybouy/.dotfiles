@@ -34,7 +34,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
-let g:gruvbox_contrast_dark='dark'
-colorscheme gruvbox
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_transparent_background = 1
+let g:gruvbox_material_enable_bold = 1
 set background=dark
-highlight Normal ctermbg=NONE guibg=NONE
+colorscheme gruvbox-material
+"highlight Normal ctermbg=NONE guibg=NONE
