@@ -14,7 +14,7 @@ static const char dmenufont[]       = "Source Code Pro:style=Regular:size=10";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
 static const char selBG[]           = "#d8a657";
-static const char selFG[]           = "#282828";
+static const char selFG[]           = "#32302f";
 static const char borderColor[]     = "#d8a657";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -60,7 +60,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-m", dmenumon, "-fn", dmenufont, "-nb", normBG, "-nf", normFG, "-sb", borderColor, "-sf", normBG, NULL};
+static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-m", dmenumon, "-fn", 
+                                   dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
+                                   selFG, "-sf", selBG, NULL};
 static const char *termcmd[]  = { "st", NULL };
 static const char *snip[] = { "flameshot", "gui", NULL};
 static const char *lock[] = { "slock", NULL}; 
