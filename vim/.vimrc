@@ -39,4 +39,4 @@ let g:gruvbox_material_transparent_background = 1
 let g:gruvbox_material_enable_bold = 1
 set background=dark
 colorscheme gruvbox-material
-"highlight Normal ctermbg=NONE guibg=NONE
+highlight Normal ctermbg=NONE guibg=NONE
