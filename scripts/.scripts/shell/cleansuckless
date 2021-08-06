@@ -2,7 +2,7 @@
 
 FOLDERS=(dwm st slstatus dmenu slock)
 
-for folder in ${FOLDERS[*]}; do
+for folder in "${FOLDERS[@]}"; do
     cd $HOME/.config/suckless/${folder}
     make clean
 done
