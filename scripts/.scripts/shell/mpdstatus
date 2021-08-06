@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+    echo `mpc | sed -n '1, 1p' | cut -c -70`
+    sleep 1 
+done 
