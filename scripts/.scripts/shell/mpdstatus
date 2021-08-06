@@ -1,0 +1,18 @@
+#!/bin/bash
+
+music_icon="^c#d79921^"ﱘ
+font_color="^c#ebdbb2^"
+play_icon="^c#d79921^"
+pause_icon="^c#d79921^"
+
+while true;do
+    if [ "$(mpc --format %title% | awk 'NR==2 {print $1}')" == "[playing]" ]; then
+        echo " $play_icon $font_color $(mpc --format [[%artist%" "-" "]%title%] | head -n 1) "
+    elif [ "$(mpc --format %title% | awk 'NR==2 {print $1}')" == "[paused]" ]; then
+        echo " $pause_icon $font_color $(mpc --format [[%artist%" "-" "]%title%] | head -n 1) "
+    else 
+        echo "$music_icon $font_color - "
+    fi
+    sleep 1
+done
+
