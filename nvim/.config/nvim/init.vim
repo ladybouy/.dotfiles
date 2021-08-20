@@ -8,6 +8,7 @@ set expandtab
 set ignorecase 
 set incsearch 
 set hidden
+set linebreak
 set noerrorbells 
 set noswapfile 
 set number
