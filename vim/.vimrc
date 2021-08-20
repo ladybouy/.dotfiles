@@ -7,8 +7,9 @@ set encoding=utf-8
 set expandtab
 set exrc
 set ignorecase 
-set hidden 
 set incsearch 
+set hidden 
+set linebreak
 set nobackup
 set nocompatible 
 set noerrorbells
