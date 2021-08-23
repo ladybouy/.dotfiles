@@ -8,6 +8,7 @@ set expandtab
 set ignorecase 
 set incsearch 
 set hidden
+set linebreak
 set noerrorbells 
 set noswapfile 
 set number
@@ -23,7 +24,7 @@ set wildmenu
 "============== Plugins =============== 
 call plug#begin('~/.config/nvim/plugged')
 "Themes 
-	Plug 'morhetz/gruvbox'            "gruvbox
+	Plug 'morhetz/gruvbox'           "gruvbox
     Plug 'sainnhe/gruvbox-material'  "gruvbox-material
     Plug 'arcticicestudio/nord-vim'  "nord
     Plug 'sainnhe/everforest'
@@ -43,7 +44,7 @@ call plug#end()
 "let g:airline_theme='gruvbox'
 "set background=dark
 "colorscheme gruvbox
-"highlight Normal ctermbg=NONE guibg=NONE   "transparency
+"highlight Normal ctermbg=NONE guibg=NONE  "transparency
 
 "Gruvbox-material settings
 if has('termguicolors')

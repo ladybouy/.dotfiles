@@ -9,6 +9,7 @@ set exrc
 set ignorecase 
 set hidden 
 set incsearch 
+set linebreak
 set nobackup
 set nocompatible 
 set noerrorbells
