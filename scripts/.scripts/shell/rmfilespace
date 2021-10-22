@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ls | while read file 
+ls | while read file
 do 
     mv -n "$file" "$(echo "$file" | sed -e 's/\ /_/g')"
 done

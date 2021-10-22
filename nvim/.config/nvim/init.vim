@@ -91,7 +91,7 @@ EOF
 lua << EOF
 require'lspconfig'.julials.setup{
     on_new_config = function(new_config,new_root_dir)
-      server_path = "/home/jeffrey/.julia/packages/LanguageServer/jiDTR/src"
+      server_path = "/home/lady/.julia/packages/LanguageServer/jiDTR/src"
       cmd = {
         "julia",
         "--project="..server_path,

@@ -1,6 +1,6 @@
 # ~/.bashrc
 
-PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
+PATH=$PATH:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python:$HOME/.local/bin
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
 
@@ -28,7 +28,6 @@ export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
 export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
 export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

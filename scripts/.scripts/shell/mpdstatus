@@ -16,7 +16,6 @@ while true; do
     else 
         echo "$MUSIC_ICON $FONT_COLOR - "
     fi
-
     sleep 1
 done
 

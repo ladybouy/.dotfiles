@@ -61,6 +61,8 @@ xset dpms 1800 1800 3600
 # Session lock
 xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' &
 
+xhost +
+
 # Loop for restarting dwm 
 while true; do
 		dwm >/dev/null 2>&1
