@@ -1,6 +1,6 @@
 # ~/.bashrc
 
-PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/Shell:$HOME/.scripts/Python
+PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python/:/$HOME/.local/bin
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
 
@@ -17,7 +17,6 @@ alias grep='grep --color=auto'
 alias suckless='cd $HOME/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'
-alias INSTALL='cd $HOME/Documents/Install'
 
 PS1='\[\033[01;34m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h \[\033[01;37m\]\W\[\033[0m\] \$ \[\033[m\]'
 
@@ -40,8 +39,7 @@ unset __conda_setup
 export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
 export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
 export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
-export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
+export LESS_TERMCAP_us=$'\e[4;33m'          # begin underline
 export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
 export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
-
