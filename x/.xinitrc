@@ -54,6 +54,9 @@ picom -f &
 # Wallpaper
 nitrogen --restore & 
 
+# ZSH config dir
+export ZDOTDIR=$HOME/.config/zsh
+
 #DPMS 
 xset s 1200 1200
 xset dpms 1800 1800 3600

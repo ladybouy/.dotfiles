@@ -1,20 +1,21 @@
+#!/bin/sh
 
 PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:/home/jeffrey/.scripts:/home/jeffrey/.scripts/bin:/home/jeffrey/.scripts/Shell:/home/jeffrey/.scripts/Python
 
-export EDITOR='nvim'
-export VISUAL='nvim'
-export TERMINAL='st'
-export BROWSER='brave'
-
+# Completions
+#zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-# Alias'
-alias ls='ls -lh --color=auto'
-alias grep='grep --color=auto'
-alias suckless='cd /home/jeffrey/.config/suckless'
-alias music='ncmpcpp'
-alias open='xdg-open'
+# Functions
+source "$ZDOTDIR/zsh-functions"
+zsh_add_file "zsh-alias"
+zsh_add_file "zsh-exports"
+zsh_add_file "zsh-prompt"
+
+# Plugins
+#zsh_add_plugin "zsh-users/zsh_autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
