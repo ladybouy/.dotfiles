@@ -6,4 +6,3 @@ for folder in "${FOLDERS[@]}"; do
     cd $HOME/.config/suckless/${folder}
     make clean
 done
-
