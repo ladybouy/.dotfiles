@@ -1,32 +1,22 @@
-#~/.config/zsh/.zshrc
+#!/bin/sh
 
 PATH=$PATH:/usr/bin/:/usr/sbin:/usr/local/bin:/usr/local/sbin/:/home/jeffrey/.scripts:/home/jeffrey/.scripts/bin:/home/jeffrey/.scripts/Shell:/home/jeffrey/.scripts/Python
 
-export EDITOR='nvim'
-export VISUAL='nvim'
-export TERMINAL='st'
-export BROWSER='brave'
-
+# Completions
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
 
-# Alias'
-alias ls='ls -lh --color=auto'
-alias grep='grep --color=auto'
-alias suckless='cd /home/jeffrey/.config/suckless'
-alias music='ncmpcpp'
-alias open='xdg-open'
+# Functions
+source "$ZDOTDIR/zsh-functions"
+zsh_add_file "zsh-alias"
+zsh_add_file "zsh-exports"
+zsh_add_file "zsh-prompt"
 
-RANGER_LOAD_DEFAULT_RC=FALSE 
-
-## less display colors
-#export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
-#export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
-#export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
-#export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
-#export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
-#export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
-#export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
+# Plugins
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "hlissner/zsh-autopair"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -43,4 +33,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-echo "ZSH settings loaded"
+RANGER_LOAD_DEFAULT_RC=FALSE 
