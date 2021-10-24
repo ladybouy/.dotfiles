@@ -1,5 +1,10 @@
 mpd/.config/mpd/pid
 mpd/.config/mpd/state
+mpd/.config/mpd/playlists
+mpd/.config/mpd/database
+ncmpcpp/.config/ncmpcpp/error.log
+vim/.vim/.netrwhist
 nvim/.config/nvim/plugged
-vim/.vim/plugged
+vim/.config/plugged
+zsh/.config/zsh/plugins
 *.o
