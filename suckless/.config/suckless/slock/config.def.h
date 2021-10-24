@@ -28,5 +28,4 @@ static XRectangle rectangles[9] = {
 	{ 8,	3,	4,	1 },
 	{ 9,	4,	1,	2 },
 	{ 11,	4,	1,	2 },
-
 };

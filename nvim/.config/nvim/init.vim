@@ -27,7 +27,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'morhetz/gruvbox'           "gruvbox
     Plug 'sainnhe/gruvbox-material'  "gruvbox-material
     Plug 'arcticicestudio/nord-vim'  "nord
-    Plug 'sainnhe/everforest'
 "Functionality
     Plug 'tpope/vim-surround'
     Plug 'vim-airline/vim-airline' 

@@ -25,7 +25,7 @@ set softtabstop=4
 set tabstop=4
 set wildmenu
 
-call plug#begin('~/.vim/plugged') 
+call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'morhetz/gruvbox'
     Plug 'sainnhe/gruvbox-material'
