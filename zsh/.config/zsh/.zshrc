@@ -31,6 +31,15 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
+
+# <<< conda initialize <<<
+# Less display colors 
+export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
+export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
+export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
+export LESS_TERMCAP_us=$'\e[4;33m'          # begin underline
+export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
+export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
+export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
