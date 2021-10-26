@@ -43,5 +43,3 @@ export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
 export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
 export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
-
-
