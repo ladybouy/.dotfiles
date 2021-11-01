@@ -35,12 +35,16 @@ call plug#begin('~/.vim/plugged')
 	Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
+" Allows termguicolors
 let &t_8f = "\<ESC>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<ESC>[48;2;%lu;%lu;%lum"
+
+" Color scheme settings
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
 let g:gruvbox_material_enable_bold = 1
 set background=dark
 colorscheme gruvbox-material
-highlight Normal ctermbg=NONE guibg=NONE
+
+"highlight Normal ctermbg=NONE guibg=NONE
 set termguicolors
