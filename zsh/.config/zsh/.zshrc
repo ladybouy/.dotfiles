@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=~$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
+export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
 
 # Completions
 autoload -Uz compinit && compinit
@@ -27,7 +27,7 @@ else
     if [ -f "/home/lady/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/home/lady/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/lady/anaconda3/bin:$PATH"
+        export PATH="$PATH:/home/lady/anaconda3/bin"
     fi
 fi
 unset __conda_setup

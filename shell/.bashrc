@@ -43,4 +43,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+RANGER_LOAD_DEFAULT=FALSE

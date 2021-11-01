@@ -2,5 +2,3 @@
 
 DIR=$HOME/Documents/CheatSheets
 "ls" $DIR | dmenu -c -l 20 -p 'CHEAT SHEETS:' | xargs -I {} cat $DIR/"{}"
-
-
