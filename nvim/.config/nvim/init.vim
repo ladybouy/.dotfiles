@@ -21,7 +21,7 @@ set smartindent
 set tabstop=4
 set wildmenu
 
-"============== Plugins =============== 
+"############## Plugins ############### 
 call plug#begin('~/.config/nvim/plugged')
 "Themes 
 	Plug 'morhetz/gruvbox'           "gruvbox
@@ -32,23 +32,26 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline' 
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
-    Plug 'hrsh7th/nvim-compe'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'JuliaEditorSupport/julia-vim'
-    Plug 'ap/vim-css-color' 
+    Plug 'ap/vim-css-color'
+"Snippts
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'L3MON4D3/LuaSnip'
+"Completions 
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'    
 call plug#end() 
 
-"Gruvbox settings 
-"let g:gruvbox_contrast_dark='hard'
-"let g:airline_theme='gruvbox'
-"set background=dark
-"colorscheme gruvbox
-"highlight Normal ctermbg=NONE guibg=NONE  "transparency
 
-"Gruvbox-material settings
+"######### Color scheme settings #########
 if has('termguicolors')
     set termguicolors
 endif
+" Gruvbox-material
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
 let g:gruvbox_material_enable_bold = 1
@@ -56,7 +59,8 @@ let g:airline_theme='gruvbox_material'
 set background=dark
 colorscheme gruvbox-material
 
-"Tree Sitter setup 
+
+"########## Tree Sitter setup #########
 lua << EOF
 require 'nvim-treesitter.configs'.setup {
   highlight = {
@@ -78,7 +82,8 @@ EOF
 " Fixes tab issue with julia files
 let g:latex_to_unicode_tab = "off"
 
-" NeoVim LSP setup
+
+"######### NeoVim LSP setup #########
 lua << EOF
 require'lspinstall'.setup() -- important
 local servers = require'lspinstall'.installed_servers()
@@ -124,63 +129,52 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-" Compe setup (Autocompletion)
-lua << EOF
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = true;
+"######### Auto Completion ##########
+lua <<EOF
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
 
-  source = {
-    path = true;
-    nvim_lsp = true;
-  };
-}
+  cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    },
+    mapping = {
+      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- If you want to remove the default `<C-y>` mapping, You can specify `cmp.config.disable` value.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' },
+      { name = 'buffer', keyword_length = 5 },
+    })
+  })
 
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
+  -- Use buffer source for `/`.
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
 
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
+  -- Use cmdline & path source for ':'.
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
 
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  else
-    return t "<S-Tab>"
-  end
-end
-
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+  -- Setup lspconfig.
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 EOF
