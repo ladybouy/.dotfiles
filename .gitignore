@@ -3,8 +3,8 @@ mpd/.config/mpd/state
 mpd/.config/mpd/playlists
 mpd/.config/mpd/database
 ncmpcpp/.config/ncmpcpp/error.log
+vim/.vim/plugged
 vim/.vim/.netrwhist
 nvim/.config/nvim/plugged
-vim/.config/plugged
 zsh/.config/zsh/plugins
 *.o
