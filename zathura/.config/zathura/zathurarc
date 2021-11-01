@@ -1,5 +1,5 @@
 
-set complete-bg				"#1d2021" 
+set complete-bg				"#1d2021"
 set complete-fg				"#ebdbbd"
 
 set statusbar-bg			"#1d2021" 

@@ -39,13 +39,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ap/vim-css-color' 
 call plug#end() 
 
-"Gruvbox settings 
-"let g:gruvbox_contrast_dark='hard'
-"let g:airline_theme='gruvbox'
-"set background=dark
-"colorscheme gruvbox
-"highlight Normal ctermbg=NONE guibg=NONE   "transparency
-
 "Gruvbox-material settings
 if has('termguicolors')
     set termguicolors
