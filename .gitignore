@@ -4,7 +4,7 @@ mpd/.config/mpd/playlists
 mpd/.config/mpd/database
 ncmpcpp/.config/ncmpcpp/error.log
 vim/.vim/.netrwhist
+vim/.vim/plugged
 nvim/.config/nvim/plugged
-vim/.config/plugged
 zsh/.config/zsh/plugins
 *.o
