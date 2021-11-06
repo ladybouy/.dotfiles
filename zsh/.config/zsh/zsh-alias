@@ -2,6 +2,6 @@
 
 alias ls='ls -lh --color=auto'
 alias grep='grep --color=auto'
-alias suckless='cd /home/jeffrey/.config/suckless'
+alias suckless='cd $HOME/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
+export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
 
 # Completions
 autoload -Uz compinit && compinit
@@ -20,26 +20,26 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jeffrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/lady/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jeffrey/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jeffrey/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/lady/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/lady/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jeffrey/anaconda3/bin:$PATH"
+        export PATH="$PATH:/home/lady/anaconda3/bin"
     fi
 fi
 unset __conda_setup
+# <<< conda initialize <<<
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
 
-# <<< conda initialize <<<
 # Less display colors 
 export LESS_TERMCAP_mb=$'\e[1;31m'          # begin bold
 export LESS_TERMCAP_md=$'\e[1;94m'          # begin blink
 export LESS_TERMCAP_so=$'\e[43;30m'         # begin reverse text
-export LESS_TERMCAP_us=$'\e[4;33m'          # begin underline
+export LESS_TERMCAP_us=$'\e[4;35m'          # begin underline
 export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink 
 export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
