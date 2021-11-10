@@ -1,16 +1,13 @@
 #!/bin/bash
 
-ls | while read file
-do 
+for file in * ; do 
     mv -n "$file" "$(echo "$file" | sed -e 's/\ /_/g')"
 done
 
-ls | while read file
-do
+for file in * ; do 
     mv -n "$file" "$(echo "$file" | sed -e 's/_-_/-/g')"
 done 
 
-ls | while read file
-do
+for file in * ; do 
     mv -n "$file" "$(echo "$file" | sed -e 's/,//g')"
 done    
