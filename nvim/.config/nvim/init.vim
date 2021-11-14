@@ -9,6 +9,7 @@ set ignorecase
 set incsearch 
 set hidden
 set linebreak
+set nobackup
 set noerrorbells 
 set noswapfile 
 set number
