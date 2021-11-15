@@ -1,22 +1,37 @@
 auto-reload yes
 
-bind-key j down
-bind-key k up
-bind-key J next-feed articlelist
-bind-key H prev-feed articlelist
-bind-key G end
-bind-key g home
+bind-key   j    down
+bind-key   k    up
+bind-key   J    next-feed articlelist
+bind-key   H    prev-feed articlelist
+bind-key   G    end
+bind-key   g    home
 
 browser brave
 
-color background           white    black
-color listnormal           blue     black
-color listfocus            color16  blue    bold
-color listnormal_unread    yellow   black   bold
-color listfocus_unread     color16  yellow  bold
-color title                color16  yellow  underline  bold
-color info                 red      black   bold
-color hint-separator       yellow   black 
-color article              white    black
+color background           white     black
+color listnormal           color4    black
+color listfocus            color16   blue    bold
+color listnormal_unread    color11   black   bold
+color listfocus_unread     color16   yellow  bold
+color title                color16   yellow  underline  bold
+color info                 color166  black   standout   bold
+color hint-separator       color208  black   standout
+color article              white     black
 
+highlight article "^Feed:.*"                            color4    color0
+highlight article "^Title:.*"                           color3    color0   bold
+highlight article "^Author:.*"                          color2    color0
+highlight article "^Date:.*"                            color1    color0
+highlight article "^Link:.*"                            color13   color0
+highlight article "^Flags.*"                            color9    color0
+highlight article "\\[[0-9][0-9]*\\]"                   color1    color0
+highlight article "\\[image\\ [0-9]+\\]"                color2    color0   bold 
+highlight article "\\[embedded flash: [0-9][0-9]*\\]"   color12   color0   bold 
+highlight article ":.*\\(link\\)$"                      cyan      color0
+highlight article ":.*\\(image\\)$"                     blue      color0
+highlight article ":.*\\(embedded flash\\)$"            magenta   color0
+
+download-path "~/Downloads"
+max-downloads 3
 player "mpd"

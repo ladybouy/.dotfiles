@@ -1,10 +1,13 @@
------------------------REDDIT
-#REDDIT
-https://www.reddit.com/r/suckless.rss "Reddit" "~r/suckless"
-https://www.reddit.com/r/archlinux.rss "Reddit" "~r/archlinux"
-https://www.reddit.com/r/linuxmasterrace.rss "Reddit" "~r/linuxmasterrace"
+-----------------------REDDIT-----------------------
+https://www.reddit.com/r/suckless.rss                      "Reddit" "~r/suckless"
+https://www.reddit.com/r/archlinux.rss                     "Reddit" "~r/archlinux"
+https://www.reddit.com/r/linuxmasterrace.rss               "Reddit" "~r/linuxmasterrace"
+https://www.reddit.com/r/diabetes.rss                      "Reddit" "~r/diabetes"
 
-----------------------DEFENSE
-#Defense
-https://www.thedrive.com/rss/all "Defense" "~The Drive"
-https://www.janes.com/feeds/news "Defense" "~Janes"
+----------------------DEFENSE-----------------------
+https://www.thedrive.com/rss/all                           "Defense" "~The Drive"
+https://www.janes.com/feeds/news                           "Defense" "~Janes"
+-----------------------TECH-------------------------
+https://feeds.arstechnica.com/arstechnica/technology-lab   "Tech" "~Ars Technica Tech"
+----------------------SCIENCE-----------------------
+https://feeds.arstechnica.com/arstechnica/science          "Science" "~Ars Technica Science"
