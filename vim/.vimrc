@@ -18,13 +18,19 @@ set number
 set path+=**
 set relativenumber
 set ruler
-set scrolloff=10
+set scrolloff=8
 set shiftwidth=4
 set smartcase 
 set softtabstop=4 
 set tabstop=4
 set wildmenu
 
+" File browsing
+let g:netwr_browse_split=4
+let g:netwr_altv=1
+let g:netrw_liststyle=3
+
+" Plugins
 call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'morhetz/gruvbox'

@@ -5,6 +5,6 @@
 for file in *; do 
     if [ -f "$file" ]; then
         echo "Processing "$file""
-        sed -i 's/#!\/bin\/sh/#!\/bin\/bash/g' "$file"
+        sed -i 's/OLD/NEW/g' "$file"
     fi
 done

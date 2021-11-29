@@ -30,9 +30,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Lxappearance", NULL,   NULL, 	  0,	        1, 			 -1 },
-    { "Nitrogen", NULL,       NULL,       0,            1,           -1 },
+	/* class        instance     title    tags mask     isfloating   monitor */
+	{ "Lxappearance", NULL,       NULL, 	  0,	        1, 			 -1 },
+    { "Nitrogen",     NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
