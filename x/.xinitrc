@@ -24,8 +24,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-xset +fp /usr/share/fonts/local
-xset fp rehash
+#xset +fp /usr/share/fonts/local
+#xset fp rehash
 # start some nice programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then

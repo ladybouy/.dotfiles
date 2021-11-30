@@ -20,14 +20,14 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lady/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/jeffrey/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/lady/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/lady/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/jeffrey/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jeffrey/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="$PATH:/home/lady/anaconda3/bin"
+        export PATH="$PATH:/home/jeffrey/anaconda3/bin"
     fi
 fi
 unset __conda_setup
