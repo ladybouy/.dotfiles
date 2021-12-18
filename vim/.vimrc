@@ -25,6 +25,9 @@ set softtabstop=4
 set tabstop=4
 set wildmenu
 
+" Mappings
+nnoremap <silent> <F5> :w <CR> :!clear <CR> :make %< <CR> :!./%< <CR>
+
 " File browsing
 let g:netwr_browse_split=4
 let g:netwr_altv=1

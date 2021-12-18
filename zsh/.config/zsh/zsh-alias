@@ -1,7 +1,9 @@
 #!/bin/sh
 
-alias ls='ls -lh --color=auto'
+#alias ls='ls -lh --color=auto'
+alias ls='exa --long -g --icons --git'
 alias grep='grep --color=auto'
 alias suckless='cd $HOME/.config/suckless'
 alias music='ncmpcpp'
 alias open='xdg-open'
+

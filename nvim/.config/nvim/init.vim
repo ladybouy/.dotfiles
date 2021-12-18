@@ -5,7 +5,6 @@ set cursorline
 set encoding=utf-8
 set exrc
 set expandtab 
-set ignorecase 
 set incsearch 
 set hidden
 set linebreak
@@ -21,6 +20,9 @@ set shiftwidth=4
 set smartindent
 set tabstop=4
 set wildmenu
+
+"############# Mappings ###############
+nnoremap <silent> <F5> :w <CR> :!clear <CR> :make %<<CR> :!./%<<CR>
 
 "############## Plugins ############### 
 call plug#begin('~/.config/nvim/plugged')
