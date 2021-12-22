@@ -21,19 +21,44 @@ set ruler
 set scrolloff=8
 set shiftwidth=4
 set smartcase 
+set smartindent
 set softtabstop=4 
+set splitbelow
+set splitright
 set tabstop=4
 set wildmenu
 
-" Mappings
-nnoremap <silent> <F5> :w <CR> :!clear <CR> :make %< <CR> :!./%< <CR>
+"------- Mappings
+let mapleader = " "
 
-" File browsing
+" behave vim
+nnoremap Y y$
+
+" Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Stay in ident mode
+vnoremap > >gv
+vnoremap < <gv
+
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+noremap <leader>k :m .-2<CR>==
+noremap <leader>j :m .+1<CR>==
+
+"------- File browsing
 let g:netwr_browse_split=4
 let g:netwr_altv=1
 let g:netrw_liststyle=3
 
-" Plugins
+"------- Plugins
 call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'morhetz/gruvbox'
@@ -44,11 +69,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
-" Allows termguicolors
+"------- Allows termguicolors
 let &t_8f = "\<ESC>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<ESC>[48;2;%lu;%lu;%lum"
 
-" Color scheme settings
+"------- Color scheme settings
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
 let g:gruvbox_material_enable_bold = 1

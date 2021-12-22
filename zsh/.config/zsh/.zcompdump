@@ -141,7 +141,6 @@ _comps=(
 'cal' '_cal'
 'calendar' '_calendar'
 'cap' '_cap'
-'cargo' '_cargo'
 'cask' '_cask'
 'cat' '_cat'
 'catchsegv' '_precommand'
@@ -1135,6 +1134,7 @@ _comps=(
 'restart' '_initctl'
 'retawq' '_webbrowser'
 'rfkill' '_rfkill'
+'rg' '_rg'
 'rgview' '_vim'
 'rgvim' '_vim'
 'ri' '_ri'
@@ -1780,30 +1780,30 @@ bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _bitcoin-cli _bluetoothctl _bootctl _bower _bundle \
-            _busctl _bwrap _caffeinate _cap _cargo \
-            _cask _ccache _cf _cheat _choc \
-            _chromium _cmake _coffee _composer _conan \
-            _concourse _console _coredumpctl _cppcheck _curl \
-            _dad _debuild _dget _dhcpcd _diana \
-            _docpad _drush _ecdsautil _emulator _envdir \
-            _exa _exportfs _fab _fail2ban-client _ffind \
-            _fleetctl _flutter _force _fwupdmgr _gas \
-            _ghc _gist _git-flow _git-journal _git-pulls \
-            _git-revise _git-wtf _glances _golang _google \
-            _gpgconf _gtk-launch _hledger _homestead _hostnamectl \
-            _httpie _ibus _include-what-you-use _inxi _jmeter \
-            _jmeter-plugins _jonas _journalctl _jrnl _kak \
-            _kernel-install _kitchen _knife _language_codes _libinput \
-            _lilypond _localectl _loginctl _lunchy _machinectl \
-            _mc _meson _middleman _mina _mix \
-            _mkinitcpio _mpv _mssh _mussh _mvn \
-            _nano _nanoc _networkctl _nftables _ninja \
-            _node _nvm _openssl _optirun _opustools \
-            _pacman _paru _patool _pdfgrep _perf \
-            _periscope _pgsql_utils _phing _pixz _pkcon \
-            _play _pm2 _port _protoc _pulseaudio \
-            _pygmentize _qpdf _rails _ralio _redis-cli \
-            _resolvectl _rfkill _rkt _rslsync _rspec \
+            _busctl _bwrap _caffeinate _cap _cask \
+            _ccache _cf _cheat _choc _chromium \
+            _cmake _coffee _composer _conan _concourse \
+            _console _coredumpctl _cppcheck _curl _dad \
+            _debuild _dget _dhcpcd _diana _docpad \
+            _drush _ecdsautil _emulator _envdir _exa \
+            _exportfs _fab _fail2ban-client _ffind _fleetctl \
+            _flutter _force _fwupdmgr _gas _ghc \
+            _gist _git-flow _git-journal _git-pulls _git-revise \
+            _git-wtf _glances _golang _google _gpgconf \
+            _gtk-launch _hledger _homestead _hostnamectl _httpie \
+            _ibus _include-what-you-use _inxi _jmeter _jmeter-plugins \
+            _jonas _journalctl _jrnl _kak _kernel-install \
+            _kitchen _knife _language_codes _libinput _lilypond \
+            _localectl _loginctl _lunchy _machinectl _mc \
+            _meson _middleman _mina _mix _mkinitcpio \
+            _mpv _mssh _mussh _mvn _nano \
+            _nanoc _networkctl _nftables _ninja _node \
+            _nvm _openssl _optirun _opustools _pacman \
+            _paru _patool _pdfgrep _perf _periscope \
+            _pgsql_utils _phing _pixz _pkcon _play \
+            _pm2 _port _protoc _pulseaudio _pygmentize \
+            _qpdf _rails _ralio _redis-cli _resolvectl \
+            _rfkill _rg _rkt _rslsync _rspec \
             _rsvm _rubocop _sbt _scala _scrub \
             _sdd _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
             _setcap _setup.py _sfdx _shellcheck _showoff \

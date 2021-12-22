@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python
+export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python:$HOME/.local/bin
 
 # Completions
 autoload -Uz compinit && compinit
