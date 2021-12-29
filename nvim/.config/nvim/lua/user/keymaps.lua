@@ -1,7 +1,6 @@
 
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
-
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -33,3 +32,4 @@ keymap("v", "C-j", ":m '>+1<CR>==", opts)
 keymap("v", "C-k", ":m '<-2<CR>==", opts)
 
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
+keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)

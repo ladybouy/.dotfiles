@@ -41,11 +41,11 @@ packer.init {
 
 -- Plugins
 return packer.startup(function(use)
-    
+
     -- Have packer manage itself
     use "wbthomason/packer.nvim"
 
-    -- Color Schemes 
+    -- Color Schemes
 	use "morhetz/gruvbox"
     use "sainnhe/gruvbox-material"
     use "arcticicestudio/nord-vim"
@@ -53,16 +53,16 @@ return packer.startup(function(use)
     use "lunarvim/darkplus.nvim"
     use "folke/tokyonight.nvim"
     use "sainnhe/sonokai"
-    use "vim-airline/vim-airline" 
- 
+    use "vim-airline/vim-airline"
+
     -- Completion plugins
     use "hrsh7th/nvim-cmp"              -- The completion plugin
     use "hrsh7th/cmp-buffer"            -- Buffer completions
     use "hrsh7th/cmp-path"              -- Path Completions
     use "hrsh7th/cmp-cmdline"           -- Commandline completions
     use "saadparwaiz1/cmp_luasnip"      -- Snippet completions
-    use "hrsh7th/cmp-nvim-lsp"          
-    use "hrsh7th/cmp-nvim-lua"          
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-nvim-lua"
 
     -- Snippets
     use "L3MON4D3/LuaSnip"              -- Snippet engine
@@ -73,7 +73,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"           -- Pop up API from vim
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
 
-    -- LSP 
+    -- LSP
     use "neovim/nvim-lsp"
     use "williamboman/nvim-lsp-installer"
 
@@ -88,7 +88,7 @@ return packer.startup(function(use)
     use 'nvim-telescope/telescope-media-files.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
-    if PACKER_BOOSTRAP then
+    if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
 end)
