@@ -66,11 +66,12 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format                                      argument */
 //    { run_command,         "%s ",                            "wxstatusbar"},
+//    { getmpdstat,          " %s",                           "NULL"},
     { run_command,         " %s",                           "mpdstatus"  },
 	{ run_command,	       " %1s ",							"internet"},
 //    { wifi_perc,		   " ^c#d79921^ ^c#ebdbb2^%s%% ",  "wlan0"	 	 },
-//  { netspeed_rx,         " ^c#d79921^^c#ebdbb2^ %s ",    "wlan0"      },
-//	{ run_command,	       " %1s ",							"sb-internet"},
+//    { netspeed_rx,         " ^c#d79921^^c#ebdbb2^ %s ",    "wlan0"      },
+//    { run_command,	       " %1s ",							"sb-internet"},
     { run_command,         " %1s ",                         "volume.sh"  },
     { battery_state,       " %s ",                          "BAT0"       },
     { battery_perc,        "^c#ebdbb2^%s%% ",               "BAT0"       },

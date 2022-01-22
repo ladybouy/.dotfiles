@@ -4,7 +4,7 @@
 #include<mpd/client.h>
 
 /* simple fuction to retrieve mpd status */
-
+#if defined(__linux__)
 char *
 getmpdstat() {
     struct mpd_song * song = NULL;
@@ -13,7 +13,7 @@ getmpdstat() {
         char * retstr = NULL;
         int elapsed = 0, total = 0;
     struct mpd_connection * conn;
-    if (!(conn == mpd_connection_new("localhost", 0, 30000)) ||
+    if (!(conn = mpd_connection_new("localhost", 0, 30000)) ||
             mpd_connection_get_error(conn)) {
         return smprintf(""); 
     }   
@@ -32,6 +32,7 @@ getmpdstat() {
 
                 elapsed = mpd_status_get_elapsed_time(theStatus);
                 total = mpd_status_get_total_time(theStatus);
+                mpd_song_free(song);
                 retstr = smprintf("%.2d:%.2d/%.2d:%.2d:%.2d %s - %s", 
                                     elapsed/60, elapsed%60,
                                     total/60, total%60,
@@ -44,3 +45,4 @@ getmpdstat() {
             mpd_connection_free(conn);
             return retstr; 
 }
+#endif

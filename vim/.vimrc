@@ -23,7 +23,7 @@ set shiftwidth=4
 set smartcase 
 set smartindent
 set softtabstop=4 
-set splitbelow
+"set splitbelow
 set splitright
 set tabstop=4
 set wildmenu
@@ -44,7 +44,6 @@ inoremap ? ?<c-g>u
 vnoremap > >gv
 vnoremap < <gv
 
-
 " Moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -52,6 +51,12 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 noremap <leader>k :m .-2<CR>==
 noremap <leader>j :m .+1<CR>==
+
+" Resize windows with arrows keys
+nnoremap <silent> <Up> :resize +2<CR>
+nnoremap <silent> <Down> :resize -2<CR>
+nnoremap <silent> <Left> :vertical resize -2<CR>
+nnoremap <silent> <Right> :vertical resize +2<CR>
 
 "------- File browsing
 let g:netwr_browse_split=4
