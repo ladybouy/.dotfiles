@@ -28,8 +28,10 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
-keymap("v", "C-j", ":m '>+1<CR>==", opts)
-keymap("v", "C-k", ":m '<-2<CR>==", opts)
+keymap("i", "C-j", "<esc>:m .+1<CR>==", opts)
+keymap("i", "C-k", "<esc>:m .-2<CR>==", opts)
+keymap("n", "<leader>j", ":m .+1<CR>==", opts)
+keymap("n", "<leader>k", ":m .-2<CR>==", opts)
 
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
