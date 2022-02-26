@@ -15,6 +15,14 @@ keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- Behave vim
+keymap("n", "Y", "y$", opts)
+
+-- Buffer management
+keymap("n", "B", ":buffers<CR>:buffer<Space>",opts)
+keymap("n", "<C-p>", ":bp<CR>",opts)
+keymap("n", "<C-n>", ":bn<CR>",opts)
+
 -- Resize windows with arrow keys
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)

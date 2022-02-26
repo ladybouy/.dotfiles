@@ -43,4 +43,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-RANGER_LOAD_DEFAULT=FALSE
+RANGER_LOAD_DEFAUL:=FALSE
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

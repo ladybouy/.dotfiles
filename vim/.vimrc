@@ -15,9 +15,7 @@ set nocompatible
 set noerrorbells
 set noswapfile
 set number 
-set path+=**
-set relativenumber
-set ruler
+set path+=.,,**
 set scrolloff=8
 set shiftwidth=4
 set smartcase 
@@ -25,8 +23,11 @@ set smartindent
 set softtabstop=4 
 "set splitbelow
 set splitright
+set switchbuf=usetab,newtab
 set tabstop=4
+set wildchar=<Tab>
 set wildmenu
+set wildmode=full
 
 "------- Mappings
 let mapleader = " "
@@ -58,7 +59,17 @@ nnoremap <silent> <Down> :resize -2<CR>
 nnoremap <silent> <Left> :vertical resize -2<CR>
 nnoremap <silent> <Right> :vertical resize +2<CR>
 
+" Buffer management
+nnoremap <silent> B :buffers<CR>:buffer<Space>
+nnoremap <silent> <C-n> :bn<CR>
+nnoremap <silent> <C-p> :bp<CR>
+
+" Tab management
+nnoremap L :sbnext<CR>
+nnoremap H :sbprevious<CR>
+
 "------- File browsing
+nnoremap <leader>e Lex 30<CR>
 let g:netwr_browse_split=4
 let g:netwr_altv=1
 let g:netrw_liststyle=3
