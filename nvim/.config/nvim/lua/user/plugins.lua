@@ -71,6 +71,7 @@ return packer.startup(function(use)
     -- Functionality
     use "tpope/vim-surround"
     use "nvim-lua/popup.nvim"           -- Pop up API from vim
+    use "iamcco/markdown-preview.nvim"  -- Markdown preview
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
 
     -- LSP
