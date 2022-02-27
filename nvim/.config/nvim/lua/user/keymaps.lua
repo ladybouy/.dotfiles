@@ -19,7 +19,7 @@ keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 keymap("n", "Y", "y$", opts)
 
 -- Buffer management
-keymap("n", "B", ":buffers<CR>:buffer<Space>",opts)
+keymap("n", "<C-b>", ":buffers<CR>:buffer<Space>",opts)
 keymap("n", "<C-p>", ":bp<CR>",opts)
 keymap("n", "<C-n>", ":bn<CR>",opts)
 

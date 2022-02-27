@@ -9,3 +9,4 @@ nvim/.config/nvim/plugged
 nvim/.config/nvim/backup
 zsh/.config/zsh/plugins
 *.o
+.ccls-cache/
