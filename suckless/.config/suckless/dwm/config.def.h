@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	/* class        instance     title    tags mask     isfloating   monitor */
 	{ "Lxappearance", NULL,       NULL, 	  0,	        1, 			 -1 },
     { "Nitrogen",     NULL,       NULL,       0,            1,           -1 },
+    { "Notes",        NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -68,6 +69,7 @@ static const char *termcmd[]  = {"st", NULL };
 static const char *snip[] = {"flameshot", "gui", NULL};
 static const char *lock[] = {"slock", NULL}; 
 static const char *filemgr[] = {"st","ranger", NULL};
+static const char *notes[] = {"st", "-c", "Notes", "-e", "notes", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -75,6 +77,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_l,      spawn,          {.v = lock } }, 
     { MODKEY,                       XK_f,      spawn,          {.v = filemgr } }, 
+    { MODKEY,                       XK_n,      spawn,          {.v = notes } }, 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = snip}}, 
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

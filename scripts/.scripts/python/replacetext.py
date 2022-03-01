@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+import os
+import re
 import sys
 
 def ReplaceMultipleText():
     #TODO Take in a list of words to replace
     return
-
 
 def ReplaceText(file, replaced, replacing):
 
@@ -19,7 +20,12 @@ def ReplaceText(file, replaced, replacing):
 
 
 if __name__ == "__main__":
-    file = sys.argv[1]
+   # file = sys.argv[1]
+
     old_text = input("Enter text to be replaced: ")
     new_text = input("Enter replacing text: ")
-    ReplaceText(file, old_text, new_text)
+
+    for subdir, dirs, files in os.walk('.'):
+        for file in files:
+            file_path = os.path.join(subdir, file)
+            ReplaceText(file_path, old_text, new_text)
