@@ -65,8 +65,7 @@ nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> <C-p> :bp<CR>
 
 " Tab management
-nnoremap L :sbnext<CR>
-nnoremap H :sbprevious<CR>
+" TODO
 
 "------- File browsing
 nnoremap <leader>e Lex 30<CR>
