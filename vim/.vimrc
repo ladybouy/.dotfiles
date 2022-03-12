@@ -60,11 +60,11 @@ nnoremap <silent> <Left> :vertical resize -2<CR>
 nnoremap <silent> <Right> :vertical resize +2<CR>
 
 " Buffer management
-nnoremap <silent> B :buffers<CR>:buffer<Space>
+nnoremap <silent> <C-b> :buffers<CR>:buffer<Space>
 nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> <C-p> :bp<CR>
 
-" Tab management
+"Tab management
 " TODO
 
 "------- File browsing
