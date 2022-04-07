@@ -49,3 +49,5 @@ export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
+
+export SOUND_CARD_IRQ=169
