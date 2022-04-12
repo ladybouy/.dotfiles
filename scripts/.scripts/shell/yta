@@ -1,4 +1,4 @@
 #!/bin/bash
 
 address=$1
-youtube-dl -x -f bestaudio/best --audio-format wav  -o '%(title)s.%(ext)s' $1
+youtube-dl -x -f bestaudio/best --audio-format wav  -o '%(title)s.%(ext)s' "${address}"

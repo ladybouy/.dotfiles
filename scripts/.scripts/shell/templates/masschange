@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Template for modifying a matched string in each file in a directory 
+
+for file in *; do 
+    if [ -f "$file" ]; then
+        echo "Processing "$file""
+        sed -i 's/OLD/NEW/g' "$file"
+    fi
+done

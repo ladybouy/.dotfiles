@@ -4,13 +4,14 @@
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int scalepreview       = 4;        /* tag preview scaling */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel		= 0; 
-static const char *fonts[]          = {"Source Code Pro:style=Medium:size=7",
-                                       "siji:size=7",
-                                       "Symbols Nerd Font:size=7"};
-static const char dmenufont[]       = "Source Code Pro:style=Medium:size=7";
+static const char *fonts[]          = {"JetBrains Mono:style=Regular:size=9.5",
+                                       "siji:size=10", 
+                                       "Symbols Nerd Font:size=10"};
+static const char dmenufont[]       = "Source Code Pro:style=Regular:size=9.5";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
 static const char selBG[]           = "#d8a657";
@@ -30,15 +31,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Lxappearance", NULL,   NULL, 	  0,	        1, 			 -1 },
-    { "Nitrogen", NULL,       NULL,       0,            1,           -1 },
+	/* class        instance     title    tags mask     isfloating   monitor */
+	{ "Lxappearance", NULL,       NULL, 	  0,	        1, 			 -1 },
+    { "Nitrogen",     NULL,       NULL,       0,            1,           -1 },
+    { "Notes",        NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will focus focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -60,11 +63,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p","RUN:",  "-l", "10", "-m", dmenumon, "-fn", dmenufont, "-nb", normBG, "-nf", normFG, "-sb", selFG, "-sf", selBG, NULL};
-static const char *termcmd[]  = { "st", NULL };
-static const char *snip[] = { "flameshot", "gui", NULL};
-static const char *lock[] = { "slock", NULL}; 
-static const char *filemgr[] = {"st", "ranger", NULL};
+static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
+                                   dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
+                                   selFG, "-sf", selBG, "-p", "PROGRAMS:", NULL};
+static const char *termcmd[]  = {"st", NULL };
+static const char *snip[] = {"flameshot", "gui", NULL};
+static const char *lock[] = {"slock", NULL}; 
+static const char *filemgr[] = {"st","ranger", NULL};
+static const char *notes[] = {"st", "-c", "Notes", "-e", "notes", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -72,6 +78,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_l,      spawn,          {.v = lock } }, 
     { MODKEY,                       XK_f,      spawn,          {.v = filemgr } }, 
+    { MODKEY,                       XK_n,      spawn,          {.v = notes } }, 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = snip}}, 
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

@@ -1,5 +1,4 @@
 #!/bin/bash
 
 DIR=$HOME/Documents/CheatSheets
-
-"ls" $DIR | dmenu -p "CHEAT SHEETS:" -c -l 15 | xargs -I {} cat $DIR/"{}"
+"ls" $DIR | dmenu -c -l 20 -p 'CHEAT SHEETS:' | xargs -I {} cat $DIR/"{}"

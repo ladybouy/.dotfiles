@@ -1,0 +1,21 @@
+#!/bin/bash
+
+PROJECT=$1
+FOLDERARRAY=(Folder1 Folder2 Folder3)
+
+if [ $# -eq 0 ]; then
+    echo "Please input a project name"
+    exit 0
+fi
+
+mkdir -p $PROJECT; cd $PROJECT 
+
+for FOLDER in ${FOLDERARRAY[*]}; do
+    if [ "$FOLDER" == "Folder1" ]; then
+        mkdir -p $FOLDER/{Folder11,Folder12}
+    elif [ "$FOLDER" == "Folder2" ]; then
+        mkdir -p $FOLDER/{Folder21/{Folder211,Folder212},Folder22}
+    else
+        mkdir -p $FOLDER
+    fi
+done

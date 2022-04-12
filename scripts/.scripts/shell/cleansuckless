@@ -1,8 +1,8 @@
 #!/bin/bash
 
-FOLDERS=(dwm st slstatus dmenu slock)
+FOLDER_ARRAY=(dwm st dmenu slock slstatus)
 
-for folder in "${FOLDERS[@]}"; do
-    cd $HOME/.config/suckless/${folder}
+for FOLDER in ${FOLDER_ARRAY[*]}; do
+    cd $HOME/.config/suckless/${FOLDER}
     make clean
 done
