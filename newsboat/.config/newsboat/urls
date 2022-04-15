@@ -10,6 +10,8 @@ https://www.janes.com/feeds/news                           "Defense" "~Janes"
 
 -----------------------TECH-------------------------
 https://feeds.arstechnica.com/arstechnica/technology-lab   "Tech" "~Ars Technica Tech"
+https://feeds.arstechnica.com/arstechnica/gadgets          "Gadets" "~Ars Technica Gadgets"
+https://feeds.arstechnica.com/arstechnica/gaming           "Gamming" "~Ars Technica Gaming"
 
 ----------------------SCIENCE-----------------------
 https://feeds.arstechnica.com/arstechnica/science          "Science" "~Ars Technica Science"
