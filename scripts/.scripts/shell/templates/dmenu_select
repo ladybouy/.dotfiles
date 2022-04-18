@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR="$HOME/Programming"
+CHOICE=$("ls" $DIR | dmenu -p "Programming: ")
+
+if [[ ${CHOICE} == "C" ]]; then
+    st -e nvim ${DIR}/${CHOICE}
+elif [[ ${CHOICE} == "C++" ]]; then
+    st -e nvim ${DIR}/${CHOICE}
+fi
