@@ -1,0 +1,10 @@
+configuration {
+    display-drun: "Applications";
+    drun-display-form: "{icon} {name}";
+    show-icons: true;
+    icon-theme: "Papirus";
+    modi:"window,run,drun,ssh";
+    font: "JetBrains Mono:style=Regular 11";
+}
+
+@theme "gruvbox-dark-hard"

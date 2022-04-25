@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-import re
-import sys
 
 def ReplaceMultipleText():
     #TODO Take in a list of words to replace
