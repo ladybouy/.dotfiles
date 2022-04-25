@@ -62,19 +62,22 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2]       = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *rofi[]     = {"rofi", "-show", "drun"};
-static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
+static char dmenumon[2]        = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *rofi[]      = {"rofi", "-show", "drun"};
+static const char *rofipower[] = {"rofi", "-show", "power-menu", "-modi", 
+                                  "power-menu:rofi-power-menu --no-symbols"};
+static const char *dmenucmd[]  = {"dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
                                    dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
                                    selFG, "-sf", selBG, "-p", "PROGRAMS:", NULL};
-static const char *termcmd[]  = {"st", NULL };
-static const char *snip[]     = {"flameshot", "gui", NULL};
-static const char *lock[]     = {"slock", NULL}; 
-static const char *filemgr[]  = {"st","ranger", NULL};
+static const char *termcmd[]   = {"st", NULL };
+static const char *snip[]      = {"flameshot", "gui", NULL};
+static const char *lock[]      = {"slock", NULL}; 
+static const char *filemgr[]   = {"st","ranger", NULL};
 static const char *notes[]    = {"st", "-c", "Notes", "-e", "notes", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = rofipower } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = rofi } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_l,      spawn,          {.v = lock } }, 

@@ -1,5 +1,5 @@
 configuration {
-    display-drun: "Applications";
+    display-drun: "APPLICATIONS";
     drun-display-form: "{icon} {name}";
     show-icons: true;
     icon-theme: "Papirus";
