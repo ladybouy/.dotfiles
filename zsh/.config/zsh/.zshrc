@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:$HOME/.local/bin
+export CDPATH=$CDPATH:$HOME/Programming/
 
 # General settings
 unsetopt nomatch

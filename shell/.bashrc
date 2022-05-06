@@ -1,6 +1,7 @@
 # ~/.bashrc
 
-PATH=$PATH:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python:$HOME/.local/bin
+export PATH=$PATH:$HOME/.scripts:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/Python:$HOME/.local/bin
+export CDPATH=$CDPATH:$HOME/Programming/
 
 RANGER_LOAD_DEFAULT_RC=FALSE 
 
