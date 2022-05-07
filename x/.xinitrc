@@ -49,7 +49,7 @@ xbindkeys
 exec slstatus &
 
 # Compositor 
-picom -f & 
+picom --experimental-backends -f & 
 
 # Wallpaper
 nitrogen --restore & 

@@ -11,7 +11,7 @@ static const int focusonwheel		= 0;
 static const char *fonts[]          = {"JetBrains Mono:style=Regular:size=9.5",
                                        "siji:size=10", 
                                        "Symbols Nerd Font:size=10"};
-static const char dmenufont[]       = "Source Code Pro:style=Regular:size=9.5";
+static const char dmenufont[]       = "JetBrains Mono:style=Regular:size=9.5";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
 static const char selBG[]           = "#d8a657";
