@@ -8,9 +8,8 @@ static const int scalepreview       = 4;        /* tag preview scaling */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel		= 0; 
-static const char *fonts[]          = {"JetBrains Mono:style=Regular:size=9.5",
-                                       "siji:size=10", 
-                                       "Symbols Nerd Font:size=10"};
+static const char *fonts[]          = {"JetBrainsMono Nerd Font Mono:style=Regular:size=10",
+                                       "siji:size=10"};
 static const char dmenufont[]       = "JetBrains Mono:style=Regular:size=9.5";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#e2d4ba";
@@ -65,7 +64,7 @@ static const Layout layouts[] = {
 static char dmenumon[2]        = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *rofi[]      = {"rofi", "-show", "drun"};
 static const char *rofipower[] = {"rofi", "-show", "power-menu", "-modi", 
-                                  "power-menu:rofi-power-menu --no-symbols"};
+                                  "power-menu:rofi-power-menu"};
 static const char *dmenucmd[]  = {"dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
                                    dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
                                    selFG, "-sf", selBG, "-p", "PROGRAMS:", NULL};
