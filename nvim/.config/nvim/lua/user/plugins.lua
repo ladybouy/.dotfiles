@@ -44,6 +44,8 @@ return packer.startup(function(use)
 
     -- Have packer manage itself
     use "wbthomason/packer.nvim"
+    use "kyazdani42/nvim-web-devicons"
+    use "kyazdani42/nvim-tree.lua"
 
     -- Color Schemes
 	use "morhetz/gruvbox"
@@ -53,7 +55,9 @@ return packer.startup(function(use)
     use "lunarvim/darkplus.nvim"
     use "folke/tokyonight.nvim"
     use "sainnhe/sonokai"
+    use "catppuccin/nvim"
     use "vim-airline/vim-airline"
+    use "vim-airline/vim-airline-themes"
 
     -- Completion plugins
     use "hrsh7th/nvim-cmp"              -- The completion plugin

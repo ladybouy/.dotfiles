@@ -68,10 +68,12 @@ nnoremap <silent> <C-p> :bp<CR>
 " TODO
 
 "------- File browsing
-nnoremap <leader>e Lex 30<CR>
+nnoremap <leader>e :Vexplore <CR>
 let g:netwr_browse_split=4
 let g:netwr_altv=1
 let g:netrw_liststyle=3
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
 
 "------- Plugins
 call plug#begin('~/.vim/plugged')

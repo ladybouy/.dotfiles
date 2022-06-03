@@ -24,6 +24,23 @@ keymap("n", "<C-b>", ":buffers<CR>:buffer<Space>",opts)
 keymap("n", "<C-p>", ":bp<CR>",opts)
 keymap("n", "<C-n>", ":bn<CR>",opts)
 
+-- Window movement
+keymap("i", "<A-h>",  "<C-\\><C-N><C-w>h", opts)
+keymap("i", "<A-j>",  "<C-\\><C-N><C-w>j", opts)
+keymap("i", "<A-k>",  "<C-\\><C-N><C-w>k", opts)
+keymap("i", "<A-l>",  "<C-\\><C-N><C-w>l", opts)
+
+keymap("n", "<A-h>",  "<C-\\><C-N><C-w>h", opts)
+keymap("n", "<A-j>",  "<C-\\><C-N><C-w>j", opts)
+keymap("n", "<A-k>",  "<C-\\><C-N><C-w>k", opts)
+keymap("n", "<A-l>",  "<C-\\><C-N><C-w>l", opts)
+
+keymap("t", "<A-h>",  "<C-\\><C-N><C-w>h", opts)
+keymap("t", "<A-j>",  "<C-\\><C-N><C-w>j", opts)
+keymap("t", "<A-k>",  "<C-\\><C-N><C-w>k", opts)
+keymap("t", "<A-l>",  "<C-\\><C-N><C-w>l", opts)
+
+
 -- Resize windows with arrow keys
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -44,3 +61,6 @@ keymap("n", "<leader>k", ":m .-2<CR>==", opts)
 
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
+
+--nvim-tree toggle
+keymap("n","<leader>e", ":NvimTreeToggle<cr>", opts)
