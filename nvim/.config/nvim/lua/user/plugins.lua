@@ -77,6 +77,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"           -- Pop up API from vim
     use "iamcco/markdown-preview.nvim"  -- Markdown preview
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
+    use "liuchengxu/graphviz.vim"       -- Graphviz preview
 
     -- LSP
     use "neovim/nvim-lsp"

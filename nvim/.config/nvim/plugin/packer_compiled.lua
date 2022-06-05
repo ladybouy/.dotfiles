@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["graphviz.vim"] = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/graphviz.vim",
+    url = "https://github.com/liuchengxu/graphviz.vim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/gruvbox",

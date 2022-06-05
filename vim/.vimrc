@@ -54,10 +54,10 @@ noremap <leader>k :m .-2<CR>==
 noremap <leader>j :m .+1<CR>==
 
 " Resize windows with arrows keys
-nnoremap <silent> <Up> :resize +2<CR>
-nnoremap <silent> <Down> :resize -2<CR>
-nnoremap <silent> <Left> :vertical resize -2<CR>
-nnoremap <silent> <Right> :vertical resize +2<CR>
+nnoremap <silent> <C-Up> :resize +2<CR>
+nnoremap <silent> <C-Down> :resize -2<CR>
+nnoremap <silent> <C-Left> :vertical resize -2<CR>
+nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
 " Buffer management
 nnoremap <silent> <C-b> :buffers<CR>:buffer<Space>
@@ -68,7 +68,7 @@ nnoremap <silent> <C-p> :bp<CR>
 " TODO
 
 "------- File browsing
-nnoremap <leader>e :Vexplore <CR>
+nnoremap <leader>e :Lexplore <CR>
 let g:netwr_browse_split=4
 let g:netwr_altv=1
 let g:netrw_liststyle=3

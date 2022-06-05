@@ -19,7 +19,7 @@ nvim_tree.setup {
     hijack_cursor = false;
     hijack_netrw = true,
     open_on_setup = false,
-    open_on_tab = false,
+    open_on_tab = true,
     update_cwd = true;
     view = {
         width = 30,
