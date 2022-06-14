@@ -57,7 +57,11 @@ nitrogen --restore &
 # xset dpms 1800 1800 3600
 
 # Session Lock
+<<<<<<< HEAD
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'slock' '' &
+=======
+xidlehook --not-when-audio --not-when-fullscreen --timer 900 'slock' '' &
+>>>>>>> b483059 (Switched picom fork to one that has rounded corners, updated lock screen)
 
 xhost +
 
