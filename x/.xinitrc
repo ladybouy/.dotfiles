@@ -54,9 +54,8 @@ picom --experimental-backends -f &
 # Wallpaper
 nitrogen --restore & 
 
-# Session lock
-xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' --timer 600 'xset s activate' \
-    'xset s reset' --timer 600 'xset dpms force suspend' '' --timer 1200 'xset force off' '' &
+# Session Lock
+xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'slock' '' &
 
 xhost +
 
