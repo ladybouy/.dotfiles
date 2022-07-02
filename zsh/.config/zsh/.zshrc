@@ -63,4 +63,3 @@ function fzf_open_file() {
 }
 
 export SOUND_CARD_IRQ=169
-

@@ -45,7 +45,6 @@ xrandr --output HDMI-1 --same-as eDP-1
 xbindkeys
 
 # DWM Status
-#dwmstatus 2>&1 /dev/null &
 exec slstatus &
 
 # Compositor 
@@ -61,7 +60,7 @@ xhost +
 
 # Loop for restarting dwm 
 while true; do
-		dwm >/dev/null 2>&1
+    dwm >/dev/null 2>&1
 done
 
 # Execute DWM

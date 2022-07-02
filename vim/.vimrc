@@ -65,10 +65,11 @@ nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> <C-p> :bp<CR>
 
 "Tab management
-" TODO
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
 
 "------- File browsing
-nnoremap <leader>e :Lexplore <CR>
+nnoremap <leader>e :Lex <CR>
 let g:netrw_banner = 0
 let g:netwr_browse_split=4
 let g:netrw_liststyle=3
