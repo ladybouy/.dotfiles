@@ -65,6 +65,7 @@ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
 enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
+enum { DWMTags, DWMLast };                              /* DWM atoms */
 enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkClientWin,
        ClkRootWin, ClkLast }; /* clicks */
 
@@ -186,6 +187,7 @@ static void setgaps(const Arg *arg);
 static void setlayout(const Arg *arg);
 static void setmfact(const Arg *arg);
 static void setup(void);
+static void settagsatom(Window w, unsigned int tags);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
 static void showtagpreview(int tag);
@@ -245,7 +247,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
 	[PropertyNotify] = propertynotify,
 	[UnmapNotify] = unmapnotify
 };
-static Atom wmatom[WMLast], netatom[NetLast];
+static Atom wmatom[WMLast], netatom[NetLast], dwmatom[DWMLast];
 static int running = 1;
 static Cur *cursor[CurLast];
 static Clr **scheme;
@@ -1163,6 +1165,10 @@ manage(Window w, XWindowAttributes *wa)
 	Client *c, *t = NULL;
 	Window trans = None;
 	XWindowChanges wc;
+	int format;
+	unsigned int *ptags;
+	unsigned long n, extra;
+	Atom atom;
 
 	c = ecalloc(1, sizeof(Client));
 	c->win = w;
@@ -1180,8 +1186,13 @@ manage(Window w, XWindowAttributes *wa)
 	} else {
 		c->mon = selmon;
 		applyrules(c);
+		if(XGetWindowProperty(dpy, c->win, dwmatom[DWMTags], 0L, 1L, False, XA_CARDINAL,
+		                      &atom, &format, &n, &extra, (unsigned char **)&ptags) == Success && n == 1 && *ptags != 0) {
+			c->tags = *ptags;
+			XFree(ptags);
+		}
 	}
-
+	settagsatom(c->win, c->tags);
 	if (c->x + WIDTH(c) > c->mon->mx + c->mon->mw)
 		c->x = c->mon->mx + c->mon->mw - WIDTH(c);
 	if (c->y + HEIGHT(c) > c->mon->my + c->mon->mh)
@@ -1751,6 +1762,7 @@ setup(void)
 	netatom[NetWMWindowType] = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE", False);
 	netatom[NetWMWindowTypeDialog] = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE_DIALOG", False);
 	netatom[NetClientList] = XInternAtom(dpy, "_NET_CLIENT_LIST", False);
+	dwmatom[DWMTags] = XInternAtom(dpy, "_DWM_TAGS", False);
 	/* init cursors */
 	cursor[CurNormal] = drw_cur_create(drw, XC_left_ptr);
 	cursor[CurResize] = drw_cur_create(drw, XC_sizing);
@@ -1787,6 +1799,11 @@ setup(void)
 	focus(NULL);
 }
 
+void
+settagsatom(Window w, unsigned int tags) {
+	XChangeProperty(dpy, w, dwmatom[DWMTags], XA_CARDINAL, 32,
+	                PropModeReplace, (unsigned char*)&tags, 1);
+}
 
 void
 seturgent(Client *c, int urg)
@@ -1899,6 +1916,7 @@ tag(const Arg *arg)
 {
 	if (selmon->sel && arg->ui & TAGMASK) {
 		selmon->sel->tags = arg->ui & TAGMASK;
+		settagsatom(selmon->sel->win, selmon->sel->tags);
 		focus(NULL);
 		arrange(selmon);
 	}
@@ -1971,6 +1989,7 @@ toggletag(const Arg *arg)
 	newtags = selmon->sel->tags ^ (arg->ui & TAGMASK);
 	if (newtags) {
 		selmon->sel->tags = newtags;
+		settagsatom(selmon->sel->win, selmon->sel->tags);
 		focus(NULL);
 		arrange(selmon);
 	}
