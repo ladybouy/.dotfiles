@@ -1,0 +1,11 @@
+[Unit]
+Description=Professional audio setup for performance
+
+[Service]
+Type=simple
+RemainAfterExit=no
+ExecStart=/usr/bin/audio-setup
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target

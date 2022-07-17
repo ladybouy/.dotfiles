@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor Hotplug Daemon
+
+[Service]
+Type=simple
+RemainAfterExit=no
+ExecStart=/usr/local/bin/hotplug_monitor.sh
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target
