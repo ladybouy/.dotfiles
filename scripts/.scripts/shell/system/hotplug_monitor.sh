@@ -1,8 +1,7 @@
 #!/bin/bash
 
-X_USER=lady
 export DISPLAY=:0 
-export XAUTHORITY=/home/lady/.Xauthority
+export XAUTHORITY=/home/$(whoami)/.Xauthority
 
 function connect() {
     xrandr --output HDMI-1 --off

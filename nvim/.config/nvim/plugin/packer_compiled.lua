@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["graphviz.vim"] = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/graphviz.vim",
+    url = "https://github.com/liuchengxu/graphviz.vim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -134,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
   },
+  nvim = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -149,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -158,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -198,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lady/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/lady/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-code-dark"] = {
     loaded = true,

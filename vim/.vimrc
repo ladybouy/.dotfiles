@@ -54,10 +54,10 @@ noremap <leader>k :m .-2<CR>==
 noremap <leader>j :m .+1<CR>==
 
 " Resize windows with arrows keys
-nnoremap <silent> <Up> :resize +2<CR>
-nnoremap <silent> <Down> :resize -2<CR>
-nnoremap <silent> <Left> :vertical resize -2<CR>
-nnoremap <silent> <Right> :vertical resize +2<CR>
+nnoremap <silent> <C-Up> :resize +2<CR>
+nnoremap <silent> <C-Down> :resize -2<CR>
+nnoremap <silent> <C-Left> :vertical resize -2<CR>
+nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
 " Buffer management
 nnoremap <silent> <C-b> :buffers<CR>:buffer<Space>
@@ -65,13 +65,16 @@ nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> <C-p> :bp<CR>
 
 "Tab management
-" TODO
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
 
 "------- File browsing
-nnoremap <leader>e Lex 30<CR>
+nnoremap <leader>e :Lex <CR>
+let g:netrw_banner = 0
 let g:netwr_browse_split=4
-let g:netwr_altv=1
 let g:netrw_liststyle=3
+let g:netwr_altv=1
+let g:netrw_winsize = 25
 
 "------- Plugins
 call plug#begin('~/.vim/plugged')
