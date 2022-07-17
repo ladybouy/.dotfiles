@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $(uname -r | cut -d "-" -f 3) = "rt" ]]; then
+    cpupower frequency-set -g performance
+    echo 2048 > /sys/class/rtc/rtc0/max_user_freq
+    echo 2048 > /proc/sys/dev/hpet/max-user-freq
+    setpci -v -d *:* latency_timer=b0
+    setpci -v -s 00:1f.3 latency_timer=ff
+fi

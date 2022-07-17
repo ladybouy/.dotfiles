@@ -3,4 +3,4 @@
 SEARCH_TERM=$1
 EXTENSION=$2
 
-find . -name "*$EXTENSION" | xargs grep -i "$SEARCH_TERM" --color=auto
+find . -type f -name "*.$EXTENSION" -exec grep -i --color=auto $1 {} \+
