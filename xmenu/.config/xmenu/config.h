@@ -3,7 +3,7 @@ static struct Config config = {
 	.font = "JetBrains Nerd Font Mono:style:Regular:size=10",
 
 	/* colors */
-	.background_color = "#1d2021",
+	.background_color = "#d4be98",
 	.foreground_color = "#a89984",
 	.selbackground_color = "#32302f",
 	.selforeground_color = "#ebdbb2",
