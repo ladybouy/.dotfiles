@@ -11,10 +11,10 @@ static const int focusonwheel		= 0;
 static const char *fonts[]          = {"JetBrainsMono Nerd Font Mono:style=Regular:size=10"};
 static const char dmenufont[]       = "JetBrains Mono:style=Regular:size=9.5";
 static const char normBG[]          = "#1d2021";
-static const char normFG[]          = "#e2d4ba";
+static const char normFG[]          = "#d4be98";
 static const char selBG[]           = "#d8a657";
 static const char selFG[]           = "#32302f";
-static const char borderColor[]     = "#d8a657";
+static const char borderColor[]     = "#d4be98";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { normFG,    normBG,    normBG },
@@ -71,7 +71,8 @@ static const char *termcmd[]   = {"st", NULL };
 static const char *snip[]      = {"flameshot", "gui", NULL};
 static const char *lock[]      = {"slock", NULL}; 
 static const char *filemgr[]   = {"st","ranger", NULL};
-static const char *notes[]    = {"st", "-c", "Notes", "-e", "notes", NULL};
+static const char *notes[]     = {"st", "-c", "Notes", "-e", "notes", NULL};
+static const char *xmenu[]     = {"xmenu.sh", NULL}; 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -122,6 +123,7 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
+	{ ClkRootWin,           0,              Button3,        spawn,          {.v = xmenu} },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },

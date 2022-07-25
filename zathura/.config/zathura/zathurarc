@@ -1,12 +1,12 @@
 
 set complete-bg				"#1d2021"
-set complete-fg				"#ebdbbd"
+set complete-fg				"#d4be98"
 
 set statusbar-bg			"#1d2021" 
 set statusbar-fg 			"#ebdbb2"
 
 set inputbar-bg				"#1d2021"
-set inputbar-fg				"#ebdbb2" 
+set inputbar-fg				"#d4be98" 
 
 set default-bg				"#1d2021"
 set default-fg				"#ebdbb2" 
