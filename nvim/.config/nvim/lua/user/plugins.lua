@@ -58,6 +58,7 @@ return packer.startup(function(use)
     use "catppuccin/nvim"
     use "vim-airline/vim-airline"
     use "vim-airline/vim-airline-themes"
+    use "svrana/neosolarized.nvim"
 
     -- Completion plugins
     use "hrsh7th/nvim-cmp"              -- The completion plugin
@@ -78,10 +79,13 @@ return packer.startup(function(use)
     use "iamcco/markdown-preview.nvim"  -- Markdown preview
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
     use "liuchengxu/graphviz.vim"       -- Graphviz preview
+    use "norcalli/nvim-colorizer.lua"
 
     -- LSP
     use "neovim/nvim-lsp"
     use "williamboman/nvim-lsp-installer"
+    use "MunifTanjim/prettier.nvim"
+    use "glepnir/lspsaga.nvim"
 
     -- Treesitter
     use {

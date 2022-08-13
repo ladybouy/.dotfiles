@@ -9,6 +9,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR=/bin/vim
 export VISUAL=/bin/vim
+export BROWSER=/usr/bin/firefox
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

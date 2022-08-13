@@ -63,3 +63,4 @@ function fzf_open_file() {
 }
 
 export SOUND_CARD_IRQ=169
+export BROWSER=/usr/bin/firefox

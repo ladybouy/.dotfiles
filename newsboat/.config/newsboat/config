@@ -11,7 +11,7 @@ bind-key   l    open
 bind-key   h    quit
 bind-key   U    show-urls
 
-browser brave
+browser firefox
 
 color background           white     black
 color listnormal           color4    black
