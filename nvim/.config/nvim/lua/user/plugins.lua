@@ -79,7 +79,7 @@ return packer.startup(function(use)
     use "iamcco/markdown-preview.nvim"  -- Markdown preview
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
     use "liuchengxu/graphviz.vim"       -- Graphviz preview
-    use "norcalli/nvim-colorizer.lua"
+    use "norcalli/nvim-colorizer.lua"   -- Color highlighter
 
     -- LSP
     use "neovim/nvim-lsp"
