@@ -5,7 +5,8 @@ mpd/.config/mpd/database
 ncmpcpp/.config/ncmpcpp/error.log
 vim/.vim/.netrwhist
 vim/.vim/plugged
-nvim/.config/nvim/plugged
+nvim/.config/nvim/plugged/
+nvim/.config/nvim/plugin/
 nvim/.config/nvim/backup
 zsh/.config/zsh/plugins
 zsh/.config/zsh/.zcompdump
