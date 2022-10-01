@@ -34,10 +34,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 #Setting environment variable for QT5
-export QT_QPA_PLATFORMTHEME=qt5ct 
+export QT_QPA_PLATFORMTHEME=qt5ct
 
-# Resolution 
-xrandr --output HDMI-1 --same-as eDP-1 
+# Resolution
+xrandr --output HDMI-1 --same-as eDP-1
+
+# Compositor
+picom --experimental-backends -f &
 
 # Key Binds
 xbindkeys
@@ -46,21 +49,18 @@ xbindkeys
 #dwmstatus 2>&1 /dev/null &
 exec slstatus &
 
-# Compositor 
-picom --experimental-backends -f & 
-
 # Wallpaper
-nitrogen --restore & 
+nitrogen --restore &
 
 # Session Lock
 xidlehook --not-when-audio --not-when-fullscreen --timer 900 'slock' '' &
 
 xhost +
 
-# Loop for restarting dwm 
+# Loop for restarting dwm
 while true; do
     dwm >/dev/null 2>&1
 done
 
 # Execute DWM
-exec dwm 
+exec dwm
