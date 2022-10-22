@@ -59,6 +59,7 @@ return packer.startup(function(use)
     use "vim-airline/vim-airline"
     use "vim-airline/vim-airline-themes"
     use "svrana/neosolarized.nvim"
+    use "sainnhe/everforest"
 
     -- Completion plugins
     use "hrsh7th/nvim-cmp"              -- The completion plugin
