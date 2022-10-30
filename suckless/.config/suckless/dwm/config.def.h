@@ -60,10 +60,10 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2]        = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *rofi[]      = {"rofi", "-show", "drun"};
 static const char *rofipower[] = {"rofi", "-show", "power-menu", "-modi", 
                                   "power-menu:rofi-power-menu"};
+static char dmenumon[2]        = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]  = {"dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
                                    dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
                                    selFG, "-sf", selBG, "-p", "PROGRAMS:", NULL};
