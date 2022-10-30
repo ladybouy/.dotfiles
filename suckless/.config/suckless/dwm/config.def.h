@@ -74,7 +74,7 @@ static const char *filemgr[]   = {"st","ranger", NULL};
 static const char *notes[]     = {"st", "-c", "Notes", "-e", "notes", NULL};
 static const char *xmenu[]     = {"xmenu.sh", NULL}; 
 
-static Key keys[] = {
+static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = rofipower } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = rofi } },
@@ -121,7 +121,7 @@ static Key keys[] = {
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
-static Button buttons[] = {
+static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkRootWin,           0,              Button3,        spawn,          {.v = xmenu} },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
