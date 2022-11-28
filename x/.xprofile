@@ -37,7 +37,10 @@ fi
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Resolution
-xrandr --output HDMI-1 --same-as eDP-1
+if [ $(cat /sys/class/drm/card0-HDMI-A-1/status) == "connected" ]; then
+    xrandr --output HDMI-1 --auto --primary
+    xrandr --output eDP-1 --off
+fi
 
 # Compositor
 picom --experimental-backends -f &
@@ -64,3 +67,4 @@ done
 
 # Execute DWM
 exec dwm
+

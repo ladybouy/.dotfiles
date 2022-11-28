@@ -38,8 +38,11 @@ fi
 #Setting environment variable for QT5
 export QT_QPA_PLATFORMTHEME=qt5ct 
 
-# Resolution 
-xrandr --output HDMI-1 --same-as eDP-1 
+# Resolution
+if [ $(cat /sys/class/drm/card0-HDMI-A-1/status) == "connected" ]; then
+    xrandr --output HDMI-1 --auto --primary
+    xrandr --output eDP-1 --off
+fi
 
 # Key Binds
 xbindkeys

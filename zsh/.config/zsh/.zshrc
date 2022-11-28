@@ -1,7 +1,8 @@
 #!/bin/sh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:$HOME/.local/bin
-export CDPATH=$CDPATH:$HOME/Programming/
 
 # General settings
 unsetopt nomatch
@@ -54,7 +55,6 @@ export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--reverse --extended --color=bg:#1d2021,bg+:#32302f,spinner:#ea6962,hl:#928374,fg:#d4be98,header:#928374,info:#9dc2ba,pointer:#ef938e,marker:#ea6962,fg+:#d4be98,prompt:#d8a657,hl+:#ea6962"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 
