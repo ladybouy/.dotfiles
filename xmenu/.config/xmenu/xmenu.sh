@@ -1,5 +1,6 @@
 #!/bin/sh
 xmenu <<EOF | sh &
+IMG:/home/lady/.icons/white-search-icon-50.png	Search  	rofi -show drun
 IMG:/home/lady/.icons/white_file_management.png	File Manager   	thunar
 IMG:/usr/share/pixmaps/nvim.png	Text Editor    	fnvim
 IMG:/usr/share/icons/hicolor/32x32/apps/firefox.png	Web Browser    	firefox

@@ -4,8 +4,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font Mono:style=Regular:pixelsize=14.5:antialias=true:autohint=true";
-static int borderpx = 2;
+/* static char *font = "JetBrainsMono Nerd Font Mono:style=Regular:pixelsize=14.5:antialias=true:autohint=true"; */
+static char *font = "FiraCode Nerd Font Mono:style=Regular:pixelsize=14.5:antialias=true:autohint=true";
+static int borderpx = 15;
 
 /*
  * What program is execed by st depends of these precedence rules:

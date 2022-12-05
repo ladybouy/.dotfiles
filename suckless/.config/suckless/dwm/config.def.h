@@ -8,8 +8,10 @@ static const int scalepreview       = 4;        /* tag preview scaling */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel		= 0; 
-static const char *fonts[]          = {"JetBrainsMono Nerd Font Mono:style=Regular:size=10"};
-static const char dmenufont[]       = "JetBrains Mono:style=Regular:size=9.5";
+/* static const char *fonts[]          = {"JetBrainsMono Nerd Font Mono:style=Regular:size=10"}; */
+/* static const char dmenufont[]       = "JetBrains Mono:style=Regular:size=9.5"; */
+static const char *fonts[]          = {"FiraCode Nerd Font Mono:style=Regular:size=11"};
+static const char dmenufont[]       = "FiraCode Nerd Font Mono:style=Regular:size=9.5";
 static const char normBG[]          = "#1d2021";
 static const char normFG[]          = "#d4be98";
 static const char selBG[]           = "#d8a657";
@@ -67,12 +69,13 @@ static char dmenumon[2]        = "0"; /* component of dmenucmd, manipulated in s
 static const char *dmenucmd[]  = {"dmenu_run", "-c", "-l", "10", "-m", dmenumon, "-fn", 
                                    dmenufont, "-nb", normBG, "-nf", normFG, "-sb",
                                    selFG, "-sf", selBG, "-p", "PROGRAMS:", NULL};
-static const char *termcmd[]   = {"st", NULL };
-static const char *snip[]      = {"flameshot", "gui", NULL};
-static const char *lock[]      = {"slock", NULL}; 
-static const char *filemgr[]   = {"st","ranger", NULL};
-static const char *notes[]     = {"st", "-c", "Notes", "-e", "notes", NULL};
-static const char *xmenu[]     = {"xmenu.sh", NULL}; 
+static const char *termcmd[]      = {"st", NULL };
+static const char *snip[]         = {"flameshot", "gui", NULL};
+static const char *lock[]         = {"slock", NULL}; 
+static const char *filemgr[]      = {"st","ranger", NULL};
+static const char *notes[]        = {"st", "-c", "Notes", "-e", "notes", NULL};
+static const char *xmenu[]        = {"xmenu.sh", NULL}; 
+static const char *layoutmenu_cmd = "layoutmenu.sh";
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -125,7 +128,7 @@ static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkRootWin,           0,              Button3,        spawn,          {.v = xmenu} },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },

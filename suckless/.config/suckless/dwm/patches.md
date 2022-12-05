@@ -4,6 +4,7 @@ dwm-alwayscenter-20200625-f04cac6.diff
 dwm-fixborders-6.2.diff
 dwm-focusonclick-20200110-61bb8b2.diff
 dwm-fullgaps-20200508-7b77734.diff
+dwm-layoutmenu-6.2.diff
 dwm-notitle-6.2.diff
 dwm-pertag-20200914-61bb8b2.diff
 dwm-removeborder-20200520-f09418b.diff
