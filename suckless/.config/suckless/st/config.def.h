@@ -119,7 +119,7 @@ static const char *colorname[] = {
   [14] = "#a7c7a2", /* cyan    */
   [15] = "#e2d3ba", /* white   */
 
-//  /* 8 normal colors */
+  /* 8 normal colors */
 //  [0] = "#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f/ regular contrast: #282828 */
 //  [1] = "#cc241d", /* red     */
 //  [2] = "#98971a", /* green   */
