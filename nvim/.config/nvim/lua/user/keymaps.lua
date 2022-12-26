@@ -6,6 +6,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
+-- File Explorer
 keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- Modes

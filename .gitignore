@@ -1,6 +1,6 @@
 mpd/.config/mpd/pid
 mpd/.config/mpd/state
-mpd/.config/mpd/playlists
+mpd/.config/mpd/playlists/
 mpd/.config/mpd/database
 ncmpcpp/.config/ncmpcpp/error.log
 vim/.vim/.netrwhist
@@ -10,5 +10,6 @@ nvim/.config/nvim/plugin/
 nvim/.config/nvim/backup
 zsh/.config/zsh/plugins
 zsh/.config/zsh/.zcompdump
+oomox/.config/oomox/ui_config.json
 *.o
 .ccls-cache/
