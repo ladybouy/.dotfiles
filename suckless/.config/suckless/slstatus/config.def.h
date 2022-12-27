@@ -73,9 +73,6 @@ static const struct arg args[] = {
 //    { netspeed_rx,         " ^c#d79921^^c#ebdbb2^ %s ",    "wlan0"      },
 //    { run_command,	       " %1s ",							"sb-internet"},
     { run_command,         " %1s ",                         "volume.sh"  },
-    { battery_state,       " %s ",                          "BAT0"       },
-    { battery_perc,        "^c#ebdbb2^%s%% ",               "BAT0"       },
-    { battery_remaining,   "%s",                            "BAT0"       },
     { datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %d %B %Y"},
     { datetime,            " ^c#d79921^^c#ebdbb2^%s ",     " %R "       },
 };

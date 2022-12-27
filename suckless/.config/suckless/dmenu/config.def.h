@@ -9,7 +9,7 @@ static unsigned int border_width = 0;
 static const unsigned int alpha = 235;
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"JetBrainsMonoMedium Nerd Font:style=Regular:size=10"
+	"FireCode Nerd Font Mono:style=Regular:size=9"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
