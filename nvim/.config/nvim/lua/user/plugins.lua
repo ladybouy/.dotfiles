@@ -77,10 +77,15 @@ return packer.startup(function(use)
     -- Functionality
     use "tpope/vim-surround"
     use "nvim-lua/popup.nvim"           -- Pop up API from vim
-    use "iamcco/markdown-preview.nvim"  -- Markdown preview
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
     use "liuchengxu/graphviz.vim"       -- Graphviz preview
     use "norcalli/nvim-colorizer.lua"   -- Color highlighter
+
+    -- Markdown preview
+    use ({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
     -- LSP
     use "neovim/nvim-lsp"
