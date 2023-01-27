@@ -62,5 +62,6 @@ function fzf_open_file() {
     xdg-open "$(find $HOME -type f -name "*" 2>/dev/null | fzf --preview='bat --color=always {}')"
 }
 
-export SOUND_CARD_IRQ=169
+export SOUND_CARD_IRQ=118
 export BROWSER=/usr/bin/firefox
+export MESA_WHICH_LLVM=1
