@@ -1,0 +1,33 @@
+!! ##### GRUBOX DARK THEME  #####
+
+!!! black dark/light
+!*color0:                          #282828
+!*color8:                          #928374
+!
+!!! red dark/light
+!*color1:                          #cc241d
+!*color9:                          #fb4934 
+!
+!!! green dark/light
+!*color2:                          #98971a
+!*color10:                         #b8bb26
+!
+!!! yellow dark/light
+!*color3:                          #d79921
+!*color11:                         #fabd2f
+!
+!!! blue dark/light
+!*color4:                          #458588
+!*color12:                         #83a589
+!
+!!! magenta dark/light
+!*color5:                          #b16286
+!*color13:                         #d3869b
+!
+!!! cyan dark/light
+!*color6:                          #689d6a
+!*color14:                         #8ec07c
+!
+!!! white dark/light
+!*color7:                          #a89984
+!*color15:                         #ebdbb2
