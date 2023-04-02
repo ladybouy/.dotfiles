@@ -1,10 +1,9 @@
-/* See LICENSE file for copyright and license details. */j
+/* See LICENSE file for copyright and license details. */
 
 /* appearance */
 static const unsigned int gappx     = 30;        /* gaps between windows */
 static const int scalepreview       = 4;        /* tag preview scaling */
 static const int focusonwheel		= 0; 
-
 static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
@@ -156,4 +155,12 @@ static const Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+};
+
+/* signal definitions */
+/* signum must be greater than 0 */
+/* trigger signals using `xsetroot -name "fsignal:<signum>"` */
+static Signal signals[] = {
+	/* signum       function        argument  */
+	{ 1,            reload_xresources,      {.v = 0} },
 };

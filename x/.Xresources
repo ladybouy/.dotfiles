@@ -1,118 +1,15 @@
-*background:		#1d2021
-*foreground: 		#e2d4ba 
-
-!! ##### GRUBOX DARK THEME  #####
-
-!!! black dark/light
-!*color0:                          #282828
-!*color8:                          #928374
-!
-!!! red dark/light
-!*color1:                          #cc241d
-!*color9:                          #fb4934 
-!
-!!! green dark/light
-!*color2:                          #98971a
-!*color10:                         #b8bb26
-!
-!!! yellow dark/light
-!*color3:                          #d79921
-!*color11:                         #fabd2f
-!
-!!! blue dark/light
-!*color4:                          #458588
-!*color12:                         #83a589
-!
-!!! magenta dark/light
-!*color5:                          #b16286
-!*color13:                         #d3869b
-!
-!!! cyan dark/light
-!*color6:                          #689d6a
-!*color14:                         #8ec07c
-!
-!!! white dark/light
-!*color7:                          #a89984
-!*color15:                         #ebdbb2
-
-!!#### GRUBOX LIGHT THEME  #####
-
-!!! black dark/light
-!*color0:                          #fbf1c7
-!*color8:                          #928374
-!
-!!! red dark/light
-!*color1:                          #cc241d
-!*color9:                          #9d0006
-!
-!!! green dark/light
-!*color2:                          #98971a
-!*color10:                         #79740e 
-!
-!!! yellow dark/light
-!*color3:                          #d79921
-!*color11:                         #b57614
-!
-!!! blue dark/light
-!*color4:                          #458588
-!*color12:                         #076678
-!
-!!! magenta dark/light
-!*color5:                          #b16286
-!*color13:                         #8f3f71
-!
-!!! cyan dark/light
-!*color6:                          #689d6a
-!*color14:                         #427b58
-!
-!!! white dark/light
-!*color7:                          #7c6f64
-!*color15:                         #3c3836
-
-!#### GRUBOX-MATERIAL THEME  #####
-
-dwm.normbgcolor:                  #1d2021
-dwm.normfgcolor:                  #d4be98
-dwm.normbordercolor:              #1d2021
-dwm.selbgcolor:                   #d8a657
-dwm.selfgcolor:                   #32302f
-dwm.selbordercolor:               #d4be98
+!! DWM settings 
 dwm.borderpx:                     1
 dwm.snap:                         32 
 dwm.showbar:                      1
 dwm.topbar:                       1
 dwm.nmaster:                      1 
 dwm.resizehints:                  0
-dwm.mfact:                        0.55
+dwm.mfact:                        0.5
 
-!! black dark/light
-*color0:                          #282828
-*color8:                          #928374
 
-!! red dark/light
-*color1:                          #ea6962
-*color9:                          #ef938e 
-
-!! green dark/light
-*color2:                          #a9b665
-*color10:                         #bbc585
-
-!! yellow dark/light
-*color3:                          #d8a657
-*color11:                         #e1bb73
-
-!! blue dark/light
-*color4:                          #7daea3
-*color12:                         #9dc2ba
-
-!! magenta dark/light
-*color5:                          #d3869b
-*color13:                         #e1acbb
-
-!! cyan dark/light
-*color6:                          #89b482
-*color14:                         #a7c7a2
-
-!! white dark/light
-*color7:                          #d5be98
-*color15:                         #e2d4ba
+!! Themes
+#include "/home/lady/.themes/gruvbox_material_dark"
+!#include "/home/lady/.themes/gruvbox_dark"
+!#include "/home/lady/.themes/gruvbox_light"
+!#include "/home/lady/.themes/catppuccin_mocha"
