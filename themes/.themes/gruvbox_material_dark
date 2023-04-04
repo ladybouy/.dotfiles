@@ -1,6 +1,8 @@
 
 !#### GRUBOX-MATERIAL THEME  #####
 
+! soft contrast: *background: #32302f
+! hard contrast: *background: #1d2021
 *background:                      #1d2021
 *foreground:                      #e2d4ba 
 
@@ -10,6 +12,7 @@ dwm.normbordercolor:              #1d2021
 dwm.selbgcolor:                   #d8a657
 dwm.selfgcolor:                   #32302f
 dwm.selbordercolor:               #d4be98
+
 
 !! black dark/light
 *color0:                          #282828
