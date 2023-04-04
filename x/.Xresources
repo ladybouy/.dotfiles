@@ -1,5 +1,5 @@
 !! DWM settings 
-dwm.borderpx:                     2
+dwm.borderpx:                     1
 dwm.snap:                         32 
 dwm.showbar:                      1
 dwm.topbar:                       1
