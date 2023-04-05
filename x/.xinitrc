@@ -40,7 +40,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 xbindkeys
 
 # DWM Status
-exec slstatus &
+exec dwmblocks &
 
 # Compositor 
  picom --experimental-backends -f & 

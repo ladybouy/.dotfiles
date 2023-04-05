@@ -168,3 +168,5 @@ static Signal signals[] = {
 	/* signum       function        argument  */
 	{ 1,            reload_xresources,      {.v = 0} },
 };
+
+#define STATUSBAR "dwmblocks"
