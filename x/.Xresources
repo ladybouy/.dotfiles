@@ -8,7 +8,20 @@ dwm.resizehints:                  0
 dwm.mfact:                        0.5
 
 !! Themes
-#include "/home/lady/.themes/gruvbox_material_dark"
-!#include "/home/lady/.themes/gruvbox_dark"
-!#include "/home/lady/.themes/gruvbox_light"
-!#include "/home/lady/.themes/catppuccin_mocha"
+#define GRUVBOX_MATERIAL 1
+#define GRUVBOX_DARK 0
+#define GRUVBOX_LIGHT 0
+#define MATERIAL_OCEAN 0
+#define CATPPUCCIN_MOCHA 0
+
+#if GRUVBOX_MATERIAL
+    #include "/home/lady/.themes/gruvbox_material_dark"
+#elif GRUVBOX_DARK
+    #include "/home/lady/.themes/gruvbox_dark"
+#elif GRUVBOX_LIGHT
+    #include "/home/lady/.themes/gruvbox_light"
+#elif CATPPUCCIN_MOCHA
+    #include "/home/lady/.themes/catppuccin_mocha"
+#elif MATERIAL_OCEAN
+    #include "/home/lady/.themes/material_ocean"
+#endif

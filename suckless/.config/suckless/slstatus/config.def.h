@@ -67,8 +67,8 @@ static const struct arg args[] = {
 	/* function format                                      argument */
 //    { run_command,         "%s ",                            "wxstatusbar"},
 //    { getmpdstat,          " %s",                           "NULL"},
-    { run_command,         " %s",                           "mpdstatus"  },
-	{ run_command,	       " %1s ",							"internet"},
+    { run_command,         " %s",                           "mpdstatus.sh"  },
+	{ run_command,	       " %1s ",							"internet.sh"},
 //    { wifi_perc,		   " ^c#d79921^ ^c#ebdbb2^%s%% ",  "wlan0"	 	 },
 //    { netspeed_rx,         " ^c#d79921^^c#ebdbb2^ %s ",    "wlan0"      },
 //    { run_command,	       " %1s ",							"sb-internet"},
