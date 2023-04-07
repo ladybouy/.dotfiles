@@ -3789,7 +3789,7 @@ menu,
       .menu menuitem:hover accelerator,
       .context-menu menuitem:active accelerator,
       .context-menu menuitem:hover accelerator {
-        color: rgba(29, 32, 33, 0.6); }
+        color: mix(#1d2021,#d79921,0.6); }
     menu menuitem *:active, menu menuitem *:hover,
     .menu menuitem *:active,
     .menu menuitem *:hover,
