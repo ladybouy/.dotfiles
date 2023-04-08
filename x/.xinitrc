@@ -48,7 +48,7 @@ fi
 xbindkeys
 
 # DWM Status
-exec slstatus &
+exec dwmblocks &
 
 # Compositor 
 picom --experimental-backends -f & 
