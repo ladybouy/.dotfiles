@@ -7,7 +7,7 @@ PLAY_ICON=""
 PAUSE_ICON=""
 
 SPOTIFY_FORMAT=$(playerctl --player=spotify metadata --format "{{artist}} - {{title}}")
-SPOTIFY_STATUS=$(playerctl status --format "{{ uc(status) }}")
+SPOTIFY_STATUS=$(playerctl --player=spotify status --format "{{ uc(status) }}")
 SPOTIFY=$(playerctl --player=spotify)
 
 spotify_toggle() 
