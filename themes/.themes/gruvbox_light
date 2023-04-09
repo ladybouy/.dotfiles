@@ -9,6 +9,11 @@ dwm.selbgcolor:                   #98971a
 dwm.selfgcolor:                   #32302f
 dwm.selbordercolor:               #d4be98
 
+dmenu.normfgcolor:                  #1d2021
+dmenu.normbgcolor:                  #d4be98
+dmenu.selbgcolor:                   #98971a
+dmenu.selfgcolor:                   #32302f
+
 !! black dark/light
 *color0:                          #fbf1c7
 *color8:                          #928374
