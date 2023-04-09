@@ -5,7 +5,7 @@
 
 // clang-format off
 Block blocks[] = {
-    {"spotifystatus.py",   1,      1 },
+    {"spotifystatus.sh",   1,      1 },
     {"mpdstatus.sh",       1,      2 },
     {"wxstatusbar.sh",     1,      3 },
     {"internet.sh",        1,      4 },
