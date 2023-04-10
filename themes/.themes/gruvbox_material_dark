@@ -1,10 +1,12 @@
 
-!#### GRUBOX-MATERIAL THEME  #####
-
 ! soft contrast: *background: #32302f
 ! hard contrast: *background: #1d2021
-*background:                      #1d2021
-*foreground:                      #e2d4ba 
+
+dmenu.normbgcolor:                  #1d2021
+dmenu.normfgcolor:                  #d4be98
+dmenu.selbgcolor:                   #d8a657
+dmenu.selfgcolor:                   #32302f
+!dmenu.prompt:                       #d8a657
 
 dwm.normbgcolor:                  #1d2021
 dwm.normfgcolor:                  #d4be98
@@ -13,35 +15,36 @@ dwm.selbgcolor:                   #d8a657
 dwm.selfgcolor:                   #32302f
 dwm.selbordercolor:               #d4be98
 
+#define FOREGROUND    #e2d4ba
+#define BACKGROUND    #1d2021
 
-!! black dark/light
-*color0:                          #282828
-*color8:                          #928374
+#define BLACK_DARK    #282828
+#define BLACK_LIGHT   #928374
 
-!! red dark/light
-*color1:                          #ea6962
-*color9:                          #ef938e 
 
-!! green dark/light
-*color2:                          #a9b665
-*color10:                         #bbc585
-
-!! yellow dark/light
-*color3:                          #d8a657
-*color11:                         #e1bb73
-
-!! blue dark/light
-*color4:                          #7daea3
-*color12:                         #9dc2ba
-
-!! magenta dark/light
-*color5:                          #d3869b
-*color13:                         #e1acbb
-
-!! cyan dark/light
-*color6:                          #89b482
-*color14:                         #a7c7a2
-
-!! white dark/light
-*color7:                          #d5be98
-*color15:                         #e2d4ba
+#define RED_DARK      #ea6962
+#define RED_LIGHT     #ef938e 
+                              
+                              
+#define GREEN_DARK    #a9b665
+#define GREEN_LIGHT   #bbc585
+                              
+                              
+#define YELLOW_DARK   #d8a657
+#define YELLOW_LIGHT  #e1bb73
+                              
+                              
+#define BLUE_DARK     #7daea3
+#define BLUE_LIGHT    #9dc2ba
+                              
+                              
+#define MAGENTA_DARK  #d3869b
+#define MAGENTA_LIGHT #e1acbb
+                              
+                              
+#define CYAN_DARK     #89b482
+#define CYAN_LIGHT    #a7c7a2
+                              
+                              
+#define WHITE_DARK    #d5be98
+#define WHITE_LIGHT   #e2d4ba
