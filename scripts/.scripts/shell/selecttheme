@@ -1,0 +1,30 @@
+#!/bin/bash
+
+declare -a THEMES=(
+"gruvbox-material-dark"
+"gruvbox-dark"
+"gruvbox-light"
+"catppuccin-mocha"
+"material-ocean"
+)
+
+choice=$(printf "%s\n" "${THEMES[@]}" | dmenu -c -l 20 -p 'THEMES: ')
+
+if [ !$choice ]; then
+    exit
+fi
+
+for theme in "${THEMES[@]}";
+do
+    if [ $theme != $choice ]; then 
+        macro=${theme//-/_}
+        macro=${macro^^}
+        sed  -i "s/#define $macro [0-1]/#define $macro 0/g" $HOME/.Xresources
+    else
+        macro=${choice//-/_}
+        macro=${macro^^}
+        sed  -i "s/#define $macro [0-1]/#define $macro 1/g" $HOME/.Xresources
+    fi
+done
+
+xrdb merge $HOME/.Xresources && kill -USR1 $(pidof st) && xsetroot -name "fsignal:1"
