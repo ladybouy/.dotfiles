@@ -10,7 +10,7 @@ declare -a THEMES=(
 
 choice=$(printf "%s\n" "${THEMES[@]}" | dmenu -c -l 20 -p 'THEMES: ')
 
-if [ !$choice ]; then
+if [ -z $choice ]; then
     exit
 fi
 
