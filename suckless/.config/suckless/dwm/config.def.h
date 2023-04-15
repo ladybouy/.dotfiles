@@ -34,6 +34,7 @@ static const Rule rules[] = {
 	{ "Lxappearance", NULL,       NULL, 	  0,	        1, 			 -1 },
     { "Nitrogen",     NULL,       NULL,       0,            1,           -1 },
     { "Notes",        NULL,       NULL,       0,            1,           -1 },
+    { "Pavucontrol",  "pavucontrol",  "Volume Control",    0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -49,6 +50,8 @@ static const Layout layouts[] = {
 	{ "ﱡ",      monocle }, /* default is [M] */
 };
 
+#define STATUSBAR "dwmblocks"
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -60,7 +63,6 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-#define STATUSBAR "dwmblocks"
 
 /* commands */
 static const char *rofi[]      = {"rofi", "-show", "drun"};
@@ -104,7 +106,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_l,      spawn,          {.v = lock } }, 
     { MODKEY,                       XK_f,      spawn,          {.v = filemgr } }, 
-    { MODKEY,                       XK_n,      spawn,          {.v = notes } }, { MODKEY,                       XK_b,      togglebar,      {0} },
+    { MODKEY,                       XK_n,      spawn,          {.v = notes } },
+    { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = snip}}, 
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -171,4 +174,3 @@ static Signal signals[] = {
 	{ 1,            reload_xresources,      {.v = 0} },
 };
 
-#define STATUSBAR "dwmblocks"
