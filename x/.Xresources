@@ -1,5 +1,5 @@
 !! DWM settings 
-dwm.borderpx:                     2
+dwm.borderpx:                     1
 dwm.snap:                         32 
 dwm.showbar:                      1
 dwm.topbar:                       1
@@ -8,7 +8,55 @@ dwm.resizehints:                  0
 dwm.mfact:                        0.5
 
 !! Themes
-#include "/home/lady/.themes/gruvbox_material_dark"
-!#include "/home/lady/.themes/gruvbox_dark"
-!#include "/home/lady/.themes/gruvbox_light"
-!#include "/home/lady/.themes/catppuccin_mocha"
+#define GRUVBOX_MATERIAL_DARK 1
+#define GRUVBOX_DARK 0
+#define GRUVBOX_LIGHT 0
+#define CATPPUCCIN_MOCHA 0
+#define MATERIAL_OCEAN 0
+
+#if GRUVBOX_MATERIAL_DARK
+    #include "/home/lady/.themes/gruvbox_material_dark"
+#elif GRUVBOX_DARK
+    #include "/home/lady/.themes/gruvbox_dark"
+#elif GRUVBOX_LIGHT
+    #include "/home/lady/.themes/gruvbox_light"
+#elif CATPPUCCIN_MOCHA
+    #include "/home/lady/.themes/catppuccin_mocha"
+#elif MATERIAL_OCEAN
+    #include "/home/lady/.themes/material_ocean"
+#endif
+
+*background:          BACKGROUND
+*foreground:          FOREGROUND 
+
+!! black dark/light
+*color0:              BLACK_DARK
+*color8:              BLACK_LIGHT
+                                   
+!! red dark/light                  
+*color1:              RED_DARK
+*color9:              RED_LIGHT
+                                   
+!! green dark/light                
+*color2:              GREEN_DARK
+*color10:             GREEN_LIGHT
+                                   
+!! yellow dark/light               
+*color3:              YELLOW_DARK
+*color11:             YELLOW_LIGHT
+                                   
+!! blue dark/light                 
+*color4:              BLUE_DARK
+*color12:             BLUE_LIGHT
+                                   
+!! magenta dark/light              
+*color5:              MAGENTA_DARK 
+*color13:             MAGENTA_LIGHT
+                                   
+!! cyan dark/light                 
+*color6:              CYAN_DARK
+*color14:             CYAN_LIGHT
+                                   
+!! white dark/light                
+*color7:              WHITE_DARK
+*color15:             WHITE_LIGHT

@@ -7,37 +7,41 @@ dwm.selbgcolor:                   #585B70
 dwm.selfgcolor:                   #CDD6F4
 dwm.selbordercolor:               #B4BEFE
 
-*background: #1E1E2E
-*foreground: #CDD6F4
+dmenu.normbgcolor:                #1E1E2E
+dmenu.normfgcolor:                #CDD6F4
+dmenu.selbgcolor:                 #585B70
+dmenu.selfgcolor:                 #CDD6F4
 
-! black
-*color0: #45475A
-*color8: #585B70
+#define FOREGROUND    #CDD6F4
+#define BACKGROUND    #1E1E2E
 
-! red
-*color1: #F38BA8
-*color9: #F38BA8
-
-! green
-*color2: #A6E3A1
-*color10: #A6E3A1
-
-! yellow
-*color3: #F9E2AF
-*color11: #F9E2AF
-
-! blue
-*color4: #89B4FA
-*color12: #89B4FA
-
-! magenta
-*color5: #F5C2E7
-*color13: #F5C2E7
-
-! cyan
-*color6: #94E2D5
-*color14: #94E2D5
-
-! white
-*color7: #BAC2DE
-*color15: #A6ADC8
+#define BLACK_DARK    #45475A
+#define BLACK_LIGHT   #585B70
+                              
+                              
+#define RED_DARK      #F38BA8
+#define RED_LIGHT     #F38BA8
+                              
+                              
+#define GREEN_DARK    #A6E3A1
+#define GREEN_LIGHT   #A6E3A1
+                              
+                              
+#define YELLOW_DARK   #F9E2AF
+#define YELLOW_LIGHT  #F9E2AF
+                              
+                              
+#define BLUE_DARK     #89B4FA
+#define BLUE_LIGHT    #89B4FA
+                              
+                              
+#define MAGENTA_DARK  #F5C2E7
+#define MAGENTA_LIGHT #F5C2E7
+                              
+                              
+#define CYAN_DARK     #94E2D5
+#define CYAN_LIGHT    #94E2D5
+                              
+                              
+#define WHITE_DARK    #BAC2DE
+#define WHITE_LIGHT   #A6ADC8

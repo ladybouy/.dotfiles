@@ -1,6 +1,4 @@
 !#### GRUBOX LIGHT THEME  #####
-*background:                      #e2d4ba 
-*foreground:                      #1d2021
 
 dwm.normfgcolor:                  #1d2021
 dwm.normbgcolor:                  #d4be98
@@ -9,39 +7,41 @@ dwm.selbgcolor:                   #98971a
 dwm.selfgcolor:                   #32302f
 dwm.selbordercolor:               #d4be98
 
-dmenu.normfgcolor:                  #1d2021
-dmenu.normbgcolor:                  #d4be98
-dmenu.selbgcolor:                   #98971a
-dmenu.selfgcolor:                   #32302f
+dmenu.normfgcolor:                #1d2021
+dmenu.normbgcolor:                #d4be98
+dmenu.selbgcolor:                 #98971a
+dmenu.selfgcolor:                 #32302f
 
-!! black dark/light
-*color0:                          #fbf1c7
-*color8:                          #928374
+#define FOREGROUND    #1d2021
+#define BACKGROUND    #e2d4ba
 
-!! red dark/light
-*color1:                          #cc241d
-*color9:                          #9d0006
-
-!! green dark/light
-*color2:                          #98971a
-*color10:                         #79740e 
-
-!! yellow dark/light
-*color3:                          #d79921
-*color11:                         #b57614
-
-!! blue dark/light
-*color4:                          #458588
-*color12:                         #076678
-
-!! magenta dark/light
-*color5:                          #b16286
-*color13:                         #8f3f71
-
-!! cyan dark/light
-*color6:                          #689d6a
-*color14:                         #427b58
-
-!! white dark/light
-*color7:                          #7c6f64
-*color15:                         #3c3836
+#define BLACK_DARK    #fbf1c7
+#define BLACK_LIGHT   #928374
+                              
+                              
+#define RED_DARK      #cc241d
+#define RED_LIGHT     #9d0006
+                              
+                              
+#define GREEN_DARK    #98971a
+#define GREEN_LIGHT   #79740e 
+                              
+                              
+#define YELLOW_DARK   #d79921
+#define YELLOW_LIGHT  #b57614
+                              
+                              
+#define BLUE_DARK     #458588
+#define BLUE_LIGHT    #076678
+                              
+                              
+#define MAGENTA_DARK  #b16286
+#define MAGENTA_LIGHT #8f3f71
+                              
+                              
+#define CYAN_DARK     #689d6a
+#define CYAN_LIGHT    #427b58
+                              
+                              
+#define WHITE_DARK    #7c6f64
+#define WHITE_LIGHT   #3c3836
