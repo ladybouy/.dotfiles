@@ -29,7 +29,7 @@ for battery in /sys/class/power_supply/BAT?*; do
                 color=1
             fi
             ;;
-        Charging) status="ﮣ$status" ;;
+        Charging) status="ﮣ $status" ;;
         "Not charging") status="屢 " ;;
         Unknown) status=" $status" ;;
         *) exit 1 ;;
