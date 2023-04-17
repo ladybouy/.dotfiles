@@ -1,6 +1,5 @@
 #!/bin/bash
 
-ICON_COLOR="^c#d79921^"
-TEXT_COLOR="^c#ebdbb2^"
+source $HOME/.themes/statusbar_colors.sh
 
-curl -s wttr.in/$LOCATION?format=1 | awk '{ print "^c#d79921^"$1 "^c#ebdbb2^ "$2 }'
+curl -s wttr.in/$LOCATION?format=1 | awk -v icon_color=$ICON_COLOR -v text_color=$TEXT_COLOR '{ print icon_color$1 " "text_color$2 }'

@@ -1,11 +1,15 @@
 #!/bin/sh
+
+
+source $HOME/.themes/statusbar_colors.sh
+
 pacmd list-sinks |
-    awk '
+    awk -v icon_color="$ICON_COLOR" -v text_color="$TEXT_COLOR" '
         BEGIN {
-            ICONsn = "^c#d79921^^c#ebdbb2^ " # headphone unplugged, not muted
-            ICONsm = "^c#d79921^婢^c#ebdbb2^ " # headphone unplugged, muted
-            ICONhn = "^c#d79921^^c#ebdbb2^ " # headphone plugged in, not muted
-            ICONhm = "^c#d79921^^c#ebdbb2^ " # headphone plugged in, muted
+            ICONsn = icon_color" "text_color  # headphone unplugged, not muted
+            ICONsm = icon_color"婢"text_color  # headphone unplugged, muted
+            ICONhn = icon_color""text_color  # headphone plugged in, not muted
+            ICONhm = icon_color""text_color  # headphone plugged in, muted
         }
         {
             if (f) {

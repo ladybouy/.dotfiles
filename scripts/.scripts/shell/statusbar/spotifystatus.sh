@@ -1,8 +1,8 @@
 #!/bin/sh
 
-ICON_COLOR="^c#d79921^"
+source $HOME/.themes/statusbar_colors.sh
+
 ICON=""
-TEXT_COLOR="^d^"
 PLAY_ICON=""
 PAUSE_ICON=""
 
