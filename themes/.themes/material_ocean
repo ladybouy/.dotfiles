@@ -4,17 +4,17 @@
 */
 
 
-dmenu.normbgcolor:                 #0F111A
-dmenu.normfgcolor:                 #E5E9F0
-dmenu.selbgcolor:                  #FF4151
-dmenu.selfgcolor:                  #E5E9F0
+dmenu.normbgcolor:    #0F111A
+dmenu.normfgcolor:    #E5E9F0
+dmenu.selbgcolor:     #FF4151
+dmenu.selfgcolor:     #E5E9F0
 
-dwm.normbgcolor:                  #0F111A
-dwm.normfgcolor:                  #E5E9F0
-dwm.normbordercolor:              #FF4151
-dwm.selbgcolor:                   #FF4151
-dwm.selfgcolor:                   #E5E9F0
-dwm.selbordercolor:               #FF4151
+dwm.normbgcolor:      #0F111A
+dwm.normfgcolor:      #E5E9F0
+dwm.normbordercolor:  #FF4151
+dwm.selbgcolor:       #FF4151
+dwm.selfgcolor:       #E5E9F0
+dwm.selbordercolor:   #FF4151
 
 #define FOREGROUND    #E5E9F0
 #define BACKGROUND    #0F111A

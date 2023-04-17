@@ -28,6 +28,7 @@ do
         sed -i "s/gtk-icon-theme-name=.*[a-zA-Z]/gtk-theme-name=oomox-$theme/g" $HOME/.config/gtk-3.0/settings.ini
         sed -i "s/color_scheme_path=.*/color_scheme_path=\$HOME\/\.config\/qt5ct\/colors\/oomox-$theme\.conf/g" $HOME/.config/qt5ct/qt5ct.conf
         sed -i "s/icon_theme=.*/icon_theme=oomox-$theme-gtk/g" $HOME/.config/qt5ct/qt5ct.conf
+        sed -i "s/THEME=.*/THEME=$theme/g" $HOME/.themes/statusbar_colors.sh
     fi
 done
 

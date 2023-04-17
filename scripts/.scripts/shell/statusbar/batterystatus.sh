@@ -1,7 +1,6 @@
 #!/bin/sh
 
-ICON_COLOR="^c#d79921^"
-TEXT_COLOR="^d^"
+source $HOME/.themes/statusbar_colors.sh
 
 for battery in /sys/class/power_supply/BAT?*; do
     # If non-first battery, print a space separator.

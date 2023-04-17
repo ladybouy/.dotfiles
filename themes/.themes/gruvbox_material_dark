@@ -1,19 +1,15 @@
 
-! soft contrast: *background: #32302f
-! hard contrast: *background: #1d2021
+dmenu.normbgcolor:    #1d2021
+dmenu.normfgcolor:    #d4be98
+dmenu.selbgcolor:     #d8a657
+dmenu.selfgcolor:     #32302f
 
-dmenu.normbgcolor:                  #1d2021
-dmenu.normfgcolor:                  #d4be98
-dmenu.selbgcolor:                   #d8a657
-dmenu.selfgcolor:                   #32302f
-!dmenu.prompt:                       #d8a657
-
-dwm.normbgcolor:                  #1d2021
-dwm.normfgcolor:                  #d4be98
-dwm.normbordercolor:              #1d2021
-dwm.selbgcolor:                   #d8a657
-dwm.selfgcolor:                   #32302f
-dwm.selbordercolor:               #d4be98
+dwm.normbgcolor:      #1d2021
+dwm.normfgcolor:      #d4be98
+dwm.normbordercolor:  #1d2021
+dwm.selbgcolor:       #d8a657
+dwm.selfgcolor:       #32302f
+dwm.selbordercolor:   #d4be98
 
 #define FOREGROUND    #e2d4ba
 #define BACKGROUND    #1d2021
