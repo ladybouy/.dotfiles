@@ -1,12 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Material Ocean
-Comment= A material theme with oceanic colors
+Name=material-ocean
+Comment=A partially sexual act; when a female (of any species; mostly humanoids) rubs the ears/lobes of a male Ferengi, creating sensual emotions and chemical reactions in the male (and sometimes in the female).
 Encoding=UTF-8
 
-
 [X-GNOME-Metatheme]
-Name=Material Ocean
-GtkTheme=Material Ocean
-IconTheme=Material Ocean
-MetacityTheme=Material Ocean
+Name=material-ocean
+GtkTheme=material-ocean
+IconTheme=material-ocean
+MetacityTheme=material-ocean
