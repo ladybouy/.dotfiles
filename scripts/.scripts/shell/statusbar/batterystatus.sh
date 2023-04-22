@@ -30,10 +30,16 @@ for battery in /sys/class/power_supply/BAT?*; do
             ;;
         Charging) status="ﮣ $status" ;;
         "Not charging") status="屢 " ;;
-        Unknown) status=" $status" ;;
+        Unknown) status="  $status" ;;
         *) exit 1 ;;
     esac
 
+    if [[ "$(cat "$battery/status" 2>&1)" == "Discharging" ]]; then
+        time_remaining=$(acpi | awk '{print $5}')
+        echo $ICON_COLOR$status$TEXT_COLOR$capacity% $time_remaining 
+    else
+        echo $ICON_COLOR$status$TEXT_COLOR$capacity%
+    fi
+
     # Prints the info
-    echo $ICON_COLOR$status$TEXT_COLOR$capacity%
 done && echo

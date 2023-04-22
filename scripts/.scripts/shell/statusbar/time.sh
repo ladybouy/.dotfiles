@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 source $HOME/.themes/statusbar_colors.sh
 

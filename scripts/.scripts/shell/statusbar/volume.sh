@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/bin/bash
 
 source $HOME/.themes/statusbar_colors.sh
 
@@ -8,8 +7,8 @@ pacmd list-sinks |
         BEGIN {
             ICONsn = icon_color" "text_color  # headphone unplugged, not muted
             ICONsm = icon_color"婢"text_color  # headphone unplugged, muted
-            ICONhn = icon_color""text_color  # headphone plugged in, not muted
-            ICONhm = icon_color""text_color  # headphone plugged in, muted
+            ICONhn = icon_color" "text_color  # headphone plugged in, not muted
+            ICONhm = icon_color" "text_color  # headphone plugged in, muted
         }
         {
             if (f) {
