@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 source $HOME/.themes/statusbar_colors.sh
 
@@ -24,9 +24,9 @@ spotify_toggle()
 spotify_status()
 {
     if [[ "$SPOTIFY_STATUS" == "PLAYING" ]]; then
-        echo "$ICON_COLOR $ICON $PLAY_ICON $TEXT_COLOR"$SPOTIFY_FORMAT" "
+        echo $ICON_COLOR $ICON $PLAY_ICON $TEXT_COLOR$SPOTIFY_FORMAT
     elif [[ "$SPOTIFY_STATUS" == "PAUSED" ]]; then
-        echo "$ICON_COLOR $ICON $PAUSE_ICON $TEXT_COLOR"$SPOTIFY_FORMAT" "
+        echo $ICON_COLOR $ICON $PAUSE_ICON $TEXT_COLOR$SPOTIFY_FORMAT
     else 
         exit
     fi

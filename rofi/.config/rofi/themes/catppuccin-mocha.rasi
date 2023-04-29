@@ -1,3 +1,22 @@
+configuration {
+    drun {
+        display-name: " ";
+        display-format: "{icon} {name}";
+    }
+
+    run {
+        display-name: "";
+    }
+
+    window {
+        display-name: "";
+    }
+
+    timeout {
+        delay: 10;
+        action: "kb-cancel";
+    }
+}
 * {
     bg-col:  #1e1e2e;
     bg-col-light: #1e1e2e;
@@ -59,8 +78,8 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
-    columns: 2;
-    lines: 5;
+    columns: 1;
+    lines: 8;
     background-color: @bg-col;
 }
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 source $HOME/.themes/statusbar_colors.sh
@@ -8,8 +8,8 @@ pacmd list-sinks |
         BEGIN {
             ICONsn = icon_color" "text_color  # headphone unplugged, not muted
             ICONsm = icon_color"婢"text_color  # headphone unplugged, muted
-            ICONhn = icon_color""text_color  # headphone plugged in, not muted
-            ICONhm = icon_color""text_color  # headphone plugged in, muted
+            ICONhn = icon_color" "text_color  # headphone plugged in, not muted
+            ICONhm = icon_color" "text_color  # headphone plugged in, muted
         }
         {
             if (f) {
@@ -46,6 +46,7 @@ pacmd list-sinks |
 
 case $BLOCK_BUTTON in
     1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+    2) pavucontrol ;;
     3) st -e alsamixer ;;
     4) pactl set-sink-volume @DEFAULT_SINK@ +1% ;;
     5) pactl set-sink-volume @DEFAULT_SINK@ -1% ;;
