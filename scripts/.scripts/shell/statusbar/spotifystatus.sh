@@ -7,6 +7,7 @@ PLAY_ICON=""
 PAUSE_ICON=""
 BG_COLOR="^b"$GREEN_DARK"^"
 TEXT_COLOR="^c"$BLACK_DARK"^"
+ARROW_COLOR="^c"$GREEN_DARK"^"
 
 SPOTIFY_FORMAT=$(playerctl --player=spotify metadata --format "{{artist}} - {{title}}" 2>/dev/null)
 SPOTIFY_STATUS=$(playerctl --player=spotify status --format "{{ uc(status) }}" 2>/dev/null) 
@@ -26,9 +27,9 @@ spotify_toggle()
 spotify_status()
 {
     if [[ "$SPOTIFY_STATUS" == "PLAYING" ]]; then
-        echo $BG_COLOR $TEXT_COLOR$ICON $PLAY_ICON $SPOTIFY_FORMAT "^d^"
+        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$ICON $PLAY_ICON $SPOTIFY_FORMAT
     elif [[ "$SPOTIFY_STATUS" == "PAUSED" ]]; then
-        echo $BG_COLOR $TEXT_COLOR$ICON $PAUSE_ICON $SPOTIFY_FORMAT "^d^"
+        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$ICON $PAUSE_ICON $SPOTIFY_FORMAT
     else 
         exit
     fi

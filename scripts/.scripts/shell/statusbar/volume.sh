@@ -4,14 +4,15 @@
 source $HOME/.themes/statusbar_colors.sh
 BG_COLOR="^b"$CYAN_DARK"^"
 TEXT_COLOR="^c"$BLACK_DARK"^"
+ARROW_COLOR="^c"$CYAN_DARK"^"
 
-pacmd list-sinks |
-    awk -v bg_color="$BG_COLOR" -v text_color="$TEXT_COLOR" '
+echo -e $(pacmd list-sinks |
+    awk -v bg_color="$BG_COLOR" -v text_color="$TEXT_COLOR" -v arrow_color=$ARROW_COLOR '
         BEGIN {
-            ICONsn = bg_color " " text_color" "  # headphone unplugged, not muted
-            ICONsm = bg_color " " text_color"婢"  # headphone unplugged, muted
-            ICONhn = bg_color " " text_color" "  # headphone plugged in, not muted
-            ICONhm = bg_color " " text_color"婢"  # headphone plugged in, muted
+            ICONsn = arrow_color "\\ue0b2" bg_color " " text_color" "  # headphone unplugged, not muted
+            ICONsm = arrow_color "\\ue0b2 "bg_color " " text_color"婢"  # headphone unplugged, muted
+            ICONhn = arrow_color "\\ue0b2 "bg_color " " text_color" "  # headphone plugged in, not muted
+            ICONhm = arrow_color "\\ue0b2 "bg_color " " text_color"婢"  # headphone plugged in, muted
         }
         {
             if (f) {
@@ -45,6 +46,7 @@ pacmd list-sinks |
             }
         }
     '
+)
 
 case $BLOCK_BUTTON in
     1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
