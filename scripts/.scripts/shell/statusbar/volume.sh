@@ -10,9 +10,9 @@ echo -e $(pacmd list-sinks |
     awk -v bg_color="$BG_COLOR" -v text_color="$TEXT_COLOR" -v arrow_color=$ARROW_COLOR '
         BEGIN {
             ICONsn = arrow_color "\\ue0b2" bg_color " " text_color" "  # headphone unplugged, not muted
-            ICONsm = arrow_color "\\ue0b2 "bg_color " " text_color"婢"  # headphone unplugged, muted
+            ICONsm = arrow_color "\\ue0b2 "bg_color " " text_color"婢 "  # headphone unplugged, muted
             ICONhn = arrow_color "\\ue0b2 "bg_color " " text_color" "  # headphone plugged in, not muted
-            ICONhm = arrow_color "\\ue0b2 "bg_color " " text_color"婢"  # headphone plugged in, muted
+            ICONhm = arrow_color "\\ue0b2 "bg_color " " text_color"婢 "  # headphone plugged in, muted
         }
         {
             if (f) {
