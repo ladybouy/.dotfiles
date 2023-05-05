@@ -3,7 +3,6 @@
 THEME=catppuccin-mocha
 ICON_COLOR=""
 TEXT_COLOR="^d^"
-
 case "$THEME" in
     gruvbox-material-dark)
         source $HOME/.themes/status-bar-colors/gruvbox_material_dark.sh
