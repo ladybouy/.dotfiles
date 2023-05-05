@@ -1,29 +1,24 @@
 #!/bin/bash
 
-THEME=gruvbox-material-dark
+THEME=catppuccin-mocha
 ICON_COLOR=""
 TEXT_COLOR="^d^"
 
 case "$THEME" in
     gruvbox-material-dark)
-        ICON_COLOR="^c#d8a657^"
-        TEXT_COLOR="^d^"
+        source $HOME/.themes/status-bar-colors/gruvbox_material_dark.sh
         ;;
     gruvbox-dark)
-        ICON_COLOR="^c#d79921^"
-        TEXT_COLOR="^d^"
+        source $HOME/.themes/status-bar-colors/gruvbox_dark.sh
         ;;
     gruvbox-light)
-        ICON_COLOR="^c#98971a^"
-        TEXT_COLOR="^d^"
+        source $HOME/.themes/status-bar-colors/gruvbox_light.sh
         ;;
     catppuccin-mocha)
-        ICON_COLOR="^c#f9e2af^"
-        TEXT_COLOR="^d^"
+        source $HOME/.themes/status-bar-colors/catppuccin_mocha.sh
         ;;
     material-ocean)
-        ICON_COLOR="^c#ff4151^"
-        TEXT_COLOR="^d^"
+        source $HOME/.themes/status-bar-colors/material_ocean.sh
         ;;
     *)
         echo "$THEME could not be found"

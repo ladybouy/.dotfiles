@@ -3,5 +3,7 @@
 source $HOME/.themes/statusbar_colors.sh
 
 ICON=
+BG_COLOR="^b"$RED_DARK"^"
+TEXT_COLOR="^c"$BLACK_DARK"^"
 
-printf $ICON_COLOR$ICON$TEXT_COLOR'%s\n' " $(date '+%R')"
+echo $BG_COLOR $TEXT_COLOR$ICON "$(date '+%R')" "^d^"
