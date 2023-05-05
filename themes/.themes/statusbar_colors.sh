@@ -12,7 +12,10 @@ case "$THEME" in
         source $HOME/.themes/status-bar-colors/gruvbox_dark.sh
         ;;
     gruvbox-light)
+<<<<<<< HEAD
         source $HOME/.themes/status-bar-colors/gruvbox_light.sh
+=======
+>>>>>>> 434613a2709c255719d7e88add0c968159d3aafe
         ;;
     catppuccin-mocha)
         source $HOME/.themes/status-bar-colors/catppuccin_mocha.sh
