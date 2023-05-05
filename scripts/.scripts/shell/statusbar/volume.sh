@@ -2,14 +2,16 @@
 
 
 source $HOME/.themes/statusbar_colors.sh
+BG_COLOR="^b"$CYAN_DARK"^"
+TEXT_COLOR="^c"$BLACK_DARK"^"
 
 pacmd list-sinks |
-    awk -v icon_color="$ICON_COLOR" -v text_color="$TEXT_COLOR" '
+    awk -v bg_color="$BG_COLOR" -v text_color="$TEXT_COLOR" '
         BEGIN {
-            ICONsn = icon_color" "text_color  # headphone unplugged, not muted
-            ICONsm = icon_color"婢"text_color  # headphone unplugged, muted
-            ICONhn = icon_color" "text_color  # headphone plugged in, not muted
-            ICONhm = icon_color" "text_color  # headphone plugged in, muted
+            ICONsn = bg_color " " text_color" "  # headphone unplugged, not muted
+            ICONsm = bg_color " " text_color"婢"  # headphone unplugged, muted
+            ICONhn = bg_color " " text_color" "  # headphone plugged in, not muted
+            ICONhm = bg_color " " text_color"婢"  # headphone plugged in, muted
         }
         {
             if (f) {

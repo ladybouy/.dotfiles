@@ -3,8 +3,10 @@
 source $HOME/.themes/statusbar_colors.sh
 
 ICON=
+BG_COLOR="^b"$WHITE_LIGHT"^"
+TEXT_COLOR="^c"$BLACK_DARK"^"
 
-printf $ICON_COLOR$ICON$TEXT_COLOR'%s\n' " $(date '+%d %B %Y')"
+echo $BG_COLOR $TEXT_COLOR$ICON "$(date '+%d %B %Y')"
 
 case $BLOCK_BUTTON in
     1) st -e calcurse;;
