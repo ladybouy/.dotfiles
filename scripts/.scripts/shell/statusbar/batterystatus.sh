@@ -2,6 +2,10 @@
 
 source $HOME/.themes/statusbar_colors.sh
 
+BG_COLOR="^b"$RED_LIGHT"^"
+TEXT_COLOR="^c"$BLACK_DARK"^"
+ARROW_COLOR="^c"$RED_LIGHT"^"
+
 function battery_remaining()
 {
     current_now=$(cat /sys/class/power_supply/BAT0/current_now)
@@ -46,9 +50,9 @@ for battery in /sys/class/power_supply/BAT?*; do
 
     if [[ "$(cat "$battery/status" 2>&1)" == "Discharging" ]]; then
         time_remaining=$(acpi | awk '{print $5}')
-        echo $ICON_COLOR$status$TEXT_COLOR$capacity%  $(battery_remaining)
+        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$status$capacity%  $(battery_remaining)
     else
-        echo $ICON_COLOR$status$TEXT_COLOR$capacity%
+        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$status$TEXT_COLOR$capacity%
     fi
 
     # Prints the info

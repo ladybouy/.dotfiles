@@ -1,7 +1,7 @@
 configuration {
     icon-theme: "Papirus";
     modi:"run,drun,filebrowser";
-    font: "FiraCode Nerd Font Regular 10";
+    font: "FiraCode Nerd Font Regular 13";
     show-icons: true;
     icon-theme: "Papirus";
 }
