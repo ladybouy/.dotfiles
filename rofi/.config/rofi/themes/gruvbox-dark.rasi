@@ -24,8 +24,8 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg:     #1d2021;
-  bg-alt: #282828;
+  bg:     #282828;
+  bg-alt: #32302f;
   fg:     #fbf1c7;
   blue:   #7daea3;
   yellow: #d79921;
@@ -61,7 +61,7 @@ prompt {
 
 listview {
   columns: 1;
-  lines: 5;
+  lines: 10;
 }
 
 element {
