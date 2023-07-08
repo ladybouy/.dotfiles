@@ -1,0 +1,47 @@
+!#### CATPPUCCIN MOCHA THEME ####
+
+dwm.normbgcolor:      #1E1E2E
+dwm.normfgcolor:      #CDD6F4
+dwm.normbordercolor:  #1E1E2E
+dwm.selbgcolor:       #BAC2DE
+dwm.selfgcolor:       #45475A
+dwm.selbordercolor:   #B4BEFE
+
+dmenu.normbgcolor:    #1E1E2E
+dmenu.normfgcolor:    #CDD6F4
+dmenu.selbgcolor:     #585B70
+dmenu.selfgcolor:     #CDD6F4
+
+#define FOREGROUND    #24273A
+#define BACKGROUND    #CAD3F5
+
+#define BLACK_DARK    #494D64
+#define BLACK_LIGHT   #5B6078
+
+
+#define RED_DARK      #ED8796
+#define RED_LIGHT     #ED8796
+
+
+#define GREEN_DARK    #A6DA95
+#define GREEN_LIGHT   #A6DA95
+
+
+#define YELLOW_DARK   #EED49F
+#define YELLOW_LIGHT  #EED49F
+
+
+#define BLUE_DARK     #8AADF4
+#define BLUE_LIGHT    #8AADF4
+
+
+#define MAGENTA_DARK  #F5BDE6
+#define MAGENTA_LIGHT #F5BDE6
+
+
+#define CYAN_DARK     #8BD5CA
+#define CYAN_LIGHT    #8BD5CA
+
+
+#define WHITE_DARK    #A5ADCB
+#define WHITE_LIGHT   #B8C0E0

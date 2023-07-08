@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME=catppuccin-mocha
+THEME=gruvbox-dark
 ICON_COLOR=""
 TEXT_COLOR="^d^"
 case "$THEME" in
@@ -18,6 +18,9 @@ case "$THEME" in
         ;;
     material-ocean)
         source $HOME/.themes/status-bar-colors/material_ocean.sh
+        ;;
+    everforest)
+        source $HOME/.themes/status-bar-colors/everforest.sh
         ;;
     *)
         echo "$THEME could not be found"

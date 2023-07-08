@@ -1,0 +1,51 @@
+/* Copyright © Blacksuan19 @ 2020
+    Part of Material Ocean Theme
+    Licensed Under GNU's GPL3
+*/
+
+
+dmenu.normbgcolor:    #0F111A
+dmenu.normfgcolor:    #E5E9F0
+dmenu.selbgcolor:     #FF4151
+dmenu.selfgcolor:     #E5E9F0
+
+dwm.normbgcolor:      #0F111A
+dwm.normfgcolor:      #E5E9F0
+dwm.normbordercolor:  #FF4151
+dwm.selbgcolor:       #FF4151
+dwm.selfgcolor:       #E5E9F0
+dwm.selbordercolor:   #FF4151
+
+#define FOREGROUND    #E5E9F0
+#define BACKGROUND    #0F111A
+
+#define BLACK_DARK    #3B4252
+#define BLACK_LIGHT   #4C566A
+                             
+                             
+#define RED_DARK      #BF616A
+#define RED_LIGHT     #BF616A
+                             
+                             
+#define GREEN_DARK    #A3BE8C
+#define GREEN_LIGHT   #A3BE8C
+                             
+                             
+#define YELLOW_DARK   #EBCB8B
+#define YELLOW_LIGHT  #EBCB8B
+                             
+                             
+#define BLUE_DARK     #81A1C1
+#define BLUE_LIGHT    #81A1C1
+                             
+                             
+#define MAGENTA_DARK  #B48EAD
+#define MAGENTA_LIGHT #B48EAD
+                             
+                             
+#define CYAN_DARK     #88C0D0
+#define CYAN_LIGHT    #88C0D0
+                             
+                             
+#define WHITE_DARK    #E5E9F0
+#define WHITE_LIGHT   #B48EAD
