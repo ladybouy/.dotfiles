@@ -63,8 +63,12 @@ keymap("n", "<leader>k", ":m .-2<CR>==", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
 keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", opts)
 
+
 -- Terminal
 keymap("t", "<esc>", "<C-\\><C-n>", opts)
+vim.cmd[[let g:floaterm_keymap_toggle = '<leader>t']]
+vim.cmd[[let g:floaterm_wintype = 'split']]
+vim.cmd[[let g:floaterm_height = 20]]
 
 --nvim-tree toggle
 keymap("n","<leader>e", ":NvimTreeToggle<cr>", opts)

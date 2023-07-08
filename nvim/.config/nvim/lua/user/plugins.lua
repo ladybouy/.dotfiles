@@ -62,12 +62,10 @@ return packer.startup(function(use)
     use "sainnhe/everforest"
 
     -- Completion plugins
-    use "hrsh7th/nvim-cmp"              -- The completion plugin
     use "hrsh7th/cmp-buffer"            -- Buffer completions
     use "hrsh7th/cmp-path"              -- Path Completions
     use "hrsh7th/cmp-cmdline"           -- Commandline completions
     use "saadparwaiz1/cmp_luasnip"      -- Snippet completions
-    use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
 
     -- Snippets
@@ -80,6 +78,7 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim"         -- Useful lua functions
     use "liuchengxu/graphviz.vim"       -- Graphviz preview
     use "norcalli/nvim-colorizer.lua"   -- Color highlighter
+    use "voldikss/vim-floaterm"
 
     -- Markdown preview
     use ({
@@ -87,9 +86,28 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-    -- LSP
-    use "neovim/nvim-lsp"
-    use "williamboman/nvim-lsp-installer"
+    --  Langauge server Protocol
+   use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v2.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {                                      -- Optional
+          'williamboman/mason.nvim',
+          run = function()
+            pcall(vim.cmd, 'MasonUpdate')
+          end,
+        },
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+      }
+    }
+
     use "MunifTanjim/prettier.nvim"
     use "glepnir/lspsaga.nvim"
 
