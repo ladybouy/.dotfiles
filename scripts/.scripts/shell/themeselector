@@ -33,4 +33,4 @@ do
     fi
 done
 
-xrdb merge "$HOME"/.Xresources && kill -USR1 "$(pidof st)" && xsetroot -name "fsignal:1" && kill -10 "$(pidof dwmblocks)"
+xrdb merge "$HOME"/.Xresources && kill -USR1 $(pidof st) && xsetroot -name "fsignal:1" && kill -10 $(pidof dwmblocks)
