@@ -1,6 +1,11 @@
- st-alpha-0.8.2.diff
- st-anysize-0.8.4.diff
- st-blinking_cursor-20200531-a2a7044.diff
- st-gruvbox-dark-0.8.2.diff
- st-gruvbox-light-0.8.2.diff
- st-w3m-0.8.3.diff
+st-alpha-0.8.2.diff
+st-anysize-0.8.4.diff
+st-blinking_cursor-20200531-a2a7044.diff
+st-gruvbox-dark-0.8.2.diff
+st-gruvbox-light-0.8.2.diff
+st-scrollback-20210507-4536f46.diff
+st-scrollback-mouse-20191024-a2c479c.diff
+st-scrollback-mouse-altscreen-20200416-5703aa0.diff
+st-w3m-0.8.3.diff
+st-xresources-20200604-9ba7ecf.diff
+st-xresources-signal-reloading-20220407-ef05519.diff
