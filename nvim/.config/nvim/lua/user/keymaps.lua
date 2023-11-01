@@ -68,7 +68,7 @@ keymap("n", "<leader>g", "<cmd>lua require'telescope.builtin'.live_grep()<cr>", 
 keymap("t", "<esc>", "<C-\\><C-n>", opts)
 vim.cmd[[let g:floaterm_keymap_toggle = '<leader>t']]
 vim.cmd[[let g:floaterm_wintype = 'split']]
-vim.cmd[[let g:floaterm_height = 10]]
+vim.cmd[[let g:floaterm_height = 20]]
 
 --nvim-tree toggle
 keymap("n","<leader>e", ":NvimTreeToggle<cr>", opts)
