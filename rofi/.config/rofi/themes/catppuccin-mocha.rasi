@@ -1,6 +1,6 @@
 configuration {
     drun {
-        display-name: " ";
+        display-name: "  ";
         display-format: "{icon} {name}";
     }
 

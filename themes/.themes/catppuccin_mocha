@@ -1,3 +1,5 @@
+!#### CATPPUCCIN MOCHA THEME  #####
+
 dwm.normbgcolor:      #1E1E2E
 dwm.normfgcolor:      #CDD6F4
 dwm.normbordercolor:  #1E1E2E
@@ -43,5 +45,3 @@ dmenu.selfgcolor:     #CDD6F4
 
 #define WHITE_DARK    #BAC2DE
 #define WHITE_LIGHT   #A6ADC8
-
-!#### CATPPUCCIN MOCHA THEME  #####
