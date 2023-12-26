@@ -19,7 +19,7 @@ configuration {
 }
 
 * {
-  border: 0;
+  border: 5;
   margin: 3;
   padding: 0;
   spacing: 0;
@@ -28,6 +28,7 @@ configuration {
   bg-alt: #282828;
   fg:     #d4be98;
   blue:   #7daea3;
+  red:    #BF616A;
 
   background-color: @bg;
   text-color: @fg;
@@ -72,5 +73,5 @@ element-text {
 }
 
 element-text selected {
-  text-color: @blue;
+  text-color: @red;
 }
