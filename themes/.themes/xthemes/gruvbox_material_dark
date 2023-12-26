@@ -1,0 +1,46 @@
+
+dmenu.normbgcolor:    #1d2021
+dmenu.normfgcolor:    #d4be98
+dmenu.selbgcolor:     #d8a657
+dmenu.selfgcolor:     #32302f
+
+dwm.normbgcolor:      #1d2021
+dwm.normfgcolor:      #d4be98
+dwm.normbordercolor:  #1d2021
+dwm.selbgcolor:       #d8a657
+dwm.selfgcolor:       #32302f
+dwm.selbordercolor:   #d4be98
+
+#define FOREGROUND    #e2d4ba
+#define BACKGROUND    #1d2021
+
+#define BLACK_DARK    #282828
+#define BLACK_LIGHT   #928374
+
+
+#define RED_DARK      #ea6962
+#define RED_LIGHT     #ef938e 
+                              
+                              
+#define GREEN_DARK    #a9b665
+#define GREEN_LIGHT   #bbc585
+                              
+                              
+#define YELLOW_DARK   #d8a657
+#define YELLOW_LIGHT  #e1bb73
+                              
+                              
+#define BLUE_DARK     #7daea3
+#define BLUE_LIGHT    #9dc2ba
+                              
+                              
+#define MAGENTA_DARK  #d3869b
+#define MAGENTA_LIGHT #e1acbb
+                              
+                              
+#define CYAN_DARK     #89b482
+#define CYAN_LIGHT    #a7c7a2
+                              
+                              
+#define WHITE_DARK    #d5be98
+#define WHITE_LIGHT   #e2d4ba

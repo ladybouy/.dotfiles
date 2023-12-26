@@ -1,0 +1,40 @@
+!#### EVERFOREST THEME  #####
+
+dwm.normfgcolor:        #d3c6aa
+dwm.normbgcolor:        #232a2e
+dwm.normbordercolor:    #d3c6aa 
+dwm.selfgcolor:         #232a2e
+dwm.selbgcolor:         #d3c6aa
+dwm.selbordercolor:     #d3c6aa 
+
+dmenu.normfgcolor:      #d3c6aa  
+dmenu.normbgcolor:      #232a2e 
+dmenu.selfgcolor:       #232a2e
+dmenu.selbgcolor:       #d3c6aa 
+
+#define FOREGROUND      #d3c6aa 
+#define BACKGROUND      #232a2e
+
+#define BLACK_DARK      #7a8478
+#define BLACK_LIGHT     #7a8478
+                      
+#define RED_DARK        #e67e80
+#define RED_LIGHT       #e67e80
+                      
+#define GREEN_DARK      #a7c080
+#define GREEN_LIGHT     #a7c080
+                      
+#define YELLOW_DARK     #dbbc7f
+#define YELLOW_LIGHT    #dbbc7f
+                      
+#define BLUE_DARK       #7fbbb3
+#define BLUE_LIGHT      #7fbbb3
+                      
+#define MAGENTA_DARK    #d699b6
+#define MAGENTA_LIGHT   #d699b6
+                      
+#define CYAN_DARK       #83c092
+#define CYAN_LIGHT      #83c092
+                      
+#define WHITE_DARK      #d3c6aa
+#define WHITE_LIGHT     #d3c6aa
