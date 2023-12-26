@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     use "sainnhe/sonokai"
     use "catppuccin/nvim"
+    use "catppuccin/vim"
     use "vim-airline/vim-airline"
     use "vim-airline/vim-airline-themes"
     use "svrana/neosolarized.nvim"

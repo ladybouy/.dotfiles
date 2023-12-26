@@ -49,7 +49,6 @@ require("nvim-tree").setup {
   on_attach = my_on_attach,
   view = {
       width = 40,
-      hide_root_folder = false,
       side = "left",
       number = true,
       relativenumber = true,
