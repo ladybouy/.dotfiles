@@ -5,6 +5,7 @@ declare -a THEMES=(
 "gruvbox-dark"
 "gruvbox-light"
 "catppuccin-mocha"
+"everforest"
 "material-ocean"
 )
 
