@@ -1,5 +1,9 @@
 #!/bin/bash
 
+DARK_BACKGROUND=#232a2e
+LIGHT_BACKGROUND=#7a8478
+
+
 FG_COLOR=#d3c6aa
 BG_COLOR=#232a2e
 

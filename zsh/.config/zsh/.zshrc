@@ -7,6 +7,9 @@ export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:
 # General settings
 unsetopt nomatch
 
+# Themes
+source $HOME/.themes/statusbar_colors.sh
+
 #Key Bindings
 zle -N fzf_open_file
 zle -N fzf_cd
@@ -55,11 +58,11 @@ export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 
 # fzf
-export FZF_DEFAULT_OPTS="--reverse --extended --color=bg:#1d2021,bg+:#32302f,spinner:#ea6962,hl:#928374,fg:#d4be98,header:#928374,info:#9dc2ba,pointer:#ef938e,marker:#ea6962,fg+:#d4be98,prompt:#d8a657,hl+:#ea6962"
+export FZF_DEFAULT_OPTS="--reverse --extended --color=bg:$DARK_BACKGROUND,bg+:$LIGHT_BACKGROUND,spinner:$RED_DARK,hl:$BLACK_LIGHT,fg:$WHITE_DARK,header:$BLACK_LIGHT,info:$BLUE_LIGHT,pointer:$RED_LIGHT,marker:$RED_DARK,fg+:$WHITE_DARK,prompt:$YELLOW_DARK,hl+:$RED_DARK"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 
 function fzf_open_file() {
-    xdg-open "$(find $HOME -type f -name "*" 2>/dev/null | fzf --preview='bat --color=always {}')"
+    rifle "$(find $HOME -type f -name "*" 2>/dev/null | fzf --preview='bat --color=always {}')"
 }
 
 export SOUND_CARD_IRQ=118
