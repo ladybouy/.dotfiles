@@ -8,7 +8,7 @@ export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:
 unsetopt nomatch
 
 # Themes
-source $HOME/.themes/status-bar-colors/catppuccin_mocha.sh
+source $HOME/.themes/statusbar_colors.sh
 
 #Key Bindings
 zle -N fzf_open_file
@@ -58,7 +58,7 @@ export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 
 # fzf
-export FZF_DEFAULT_OPTS="--reverse --extended --color=bg:$BACKGROUND,bg+:$BACKGROUND,spinner:$RED_DARK,hl:$BLACK_LIGHT,fg:$WHITE_DARK,header:$BLACK_DARK,info:$GREEN_DARK,pointer:$RED_DARK,marker:$RED_DARK,fg+:$WHITE_DARK,prompt:$YELLOW_DARK,hl+:$RED_DARK"
+export FZF_DEFAULT_OPTS="--reverse --extended --color=bg:$DARK_BACKGROUND,bg+:$LIGHt_BACKGROUND,spinner:$RED_DARK,hl:$DARK_BACKGROUND,fg:$WHITE_DARK,header:$BLACK_LIGHT,info:$BLUE_LIGHT,pointer:$RED_LIGHT,marker:$RED_DARK,fg+:$WHITE_DARK,prompt:$YELLOW_DARK,hl+:$RED_DARK"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
 
 function fzf_open_file() {
