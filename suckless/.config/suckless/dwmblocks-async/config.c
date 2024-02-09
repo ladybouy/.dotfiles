@@ -9,7 +9,7 @@ Block blocks[] = {
     {"spotifystatus.sh",   1,      1 },
     {"wxstatusbar.sh",     60,     3 },
     {"internet.sh",        1,      4 },
-    {"volume.sh",          1,      5 },
+    {"volume-pipewire.sh", 1,      5 },
     {"calendar.sh",        60,     6 },
     {"time.sh",            1,      7 },
     {"echo ' '",          1,      8 },

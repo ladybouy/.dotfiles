@@ -3,5 +3,5 @@
 SCRIPT_PATH=$HOME/.scripts/shell
 SCRIPT="$("ls" ${SCRIPT_PATH} | dmenu -c -l 20 -p 'SCRIPTS:')"
 
-bash $SCRIPT_PATH/$SCRIPT
+bash "$SCRIPT_PATH"/"$SCRIPT"
 
