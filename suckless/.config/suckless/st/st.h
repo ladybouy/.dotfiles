@@ -114,7 +114,6 @@ void *xmalloc(size_t);
 void *xrealloc(void *, size_t);
 char *xstrdup(const char *);
 
-int xgetcolor(int x, unsigned char *r, unsigned char *g, unsigned char *b);
 
 /* config.h globals */
 extern char *utmp;
@@ -130,3 +129,4 @@ extern unsigned int defaultfg;
 extern unsigned int defaultcs;
 extern unsigned int defaultbg;
 extern float alpha;
+int xgetcolor(int, unsigned char *, unsigned char *, unsigned char *);
