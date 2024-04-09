@@ -4,15 +4,16 @@
 static const unsigned int gappx     = 30;        /* gaps between windows */
 static const int scalepreview       = 4;        /* tag preview scaling */
 static const int focusonwheel		= 0; 
-static unsigned int borderpx  = 1;        /* border pixel of windows */
-static unsigned int snap      = 32;       /* snap pixel */
-static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
-static int vertpad            = 10;       /* vertical padding of bar */
-static int sidepad            = 5;       /* horizontal padding of bar */
+static unsigned int borderpx        = 1;        /* border pixel of windows */
+static unsigned int snap            = 32;       /* snap pixel */
+static int showbar                  = 1;        /* 0 means no bar */
+static int topbar                   = 1;        /* 0 means bottom bar */
+static int vertpad                  = 8;       /* vertical padding of bar */
+static int sidepad                  = 8;       /* horizontal padding of bar */
+static const char distroicon[]      = "";
 //static char font[]            = "JetBrainsMono Nerd Font Mono:style=Bold:size=9.5";
-static char font[]            = "FiraCode Nerd Font Mono:style=Bold:size=9.5";
-static char dmenufont[]       = "FiraCode Nerd Font Mono:style=Regular:size=9";
+static char font[]                  = "FiraCode Nerd Font Mono:style=Bold:size=9.5";
+static char dmenufont[]             = "FiraCode Nerd Font Mono:style=Regular:size=9";
 static const char *fonts[]          = { font };
 static char normbgcolor[]           = "#1d2021";
 static char normbordercolor[]       = "#1d2021";
@@ -20,10 +21,13 @@ static char normfgcolor[]           = "#d4be98";
 static char selfgcolor[]            = "#32302f";
 static char selbordercolor[]        = "#d4be98";
 static char selbgcolor[]            = "#d8a657";
+static char distroiconcolor[]       = "#7daea3";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeIcon] = { distroiconcolor,  normbgcolor, normbordercolor },
+       [SchemeTitle] = { normfgcolor, normbgcolor, normbordercolor },
  };
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -92,6 +96,7 @@ ResourcePref resources[] = {
 		{ "normfgcolor",        STRING,  &normfgcolor },
 		{ "selbgcolor",         STRING,  &selbgcolor },
 		{ "selbordercolor",     STRING,  &selbordercolor },
+		{ "distroiconcolor",    STRING,  &distroiconcolor },
 		{ "selfgcolor",         STRING,  &selfgcolor },
 		{ "borderpx",          	INTEGER, &borderpx },
 		{ "snap",          		INTEGER, &snap },
