@@ -500,6 +500,7 @@ buttonpress(XEvent *e)
 				selmon->previewshow = 0;
 		}
 		i = x = 0;
+        x += TEXTW(distroicon);
 		for (c = m->clients; c; c = c->next)
 			occ |= c->tags == 255 ? 0 : c->tags;
 		do {
@@ -542,7 +543,6 @@ buttonpress(XEvent *e)
 			}
 		} else
 			click = ClkWinTitle;
-//			click = ClkStatusText;
 	} else if ((c = wintoclient(ev->window))) {
 		if (focusonwheel || (ev->button != Button4 && ev->button != Button5))
 			focus(c);
