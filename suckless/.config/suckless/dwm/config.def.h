@@ -4,12 +4,16 @@
 static const unsigned int gappx     = 30;        /* gaps between windows */
 static const int scalepreview       = 4;        /* tag preview scaling */
 static const int focusonwheel		= 0; 
-static unsigned int borderpx  = 1;        /* border pixel of windows */
-static unsigned int snap      = 32;       /* snap pixel */
-static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
-static char font[]            = "FiraCode Nerd Font Mono:style=Bold:size=10";
-static char dmenufont[]       = "FiraCode Nerd Font Mono:style=Regular:size=10";
+static unsigned int borderpx        = 1;        /* border pixel of windows */
+static unsigned int snap            = 32;       /* snap pixel */
+static int showbar                  = 1;        /* 0 means no bar */
+static int topbar                   = 1;        /* 0 means bottom bar */
+static int vertpad                  = 0;       /* vertical padding of bar */
+static int sidepad                  = 0;       /* horizontal padding of bar */
+static const char distroicon[]      = "";
+//static char font[]            = "JetBrainsMono Nerd Font Mono:style=Bold:size=9.5";
+static char font[]                  = "FiraCode Nerd Font Mono:style=Bold:size=10";
+static char dmenufont[]             = "FiraCode Nerd Font Mono:style=Regular:size=10";
 static const char *fonts[]          = { font };
 static char normbgcolor[]           = "#1d2021";
 static char normbordercolor[]       = "#1d2021";
@@ -17,10 +21,13 @@ static char normfgcolor[]           = "#d4be98";
 static char selfgcolor[]            = "#32302f";
 static char selbordercolor[]        = "#d4be98";
 static char selbgcolor[]            = "#d8a657";
+static char distroiconcolor[]       = "#7daea3";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeIcon] = { distroiconcolor,  normbgcolor, normbordercolor },
+       [SchemeTitle] = { normfgcolor, normbgcolor, normbordercolor },
  };
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -34,6 +41,7 @@ static const Rule rules[] = {
 	{ "Lxappearance", NULL,       NULL, 	  0,	        1, 			 -1 },
     { "Nitrogen",     NULL,       NULL,       0,            1,           -1 },
     { "Notes",        NULL,       NULL,       0,            1,           -1 },
+    { "Pavucontrol",  "pavucontrol",  "Volume Control",    0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -49,6 +57,8 @@ static const Layout layouts[] = {
 	{ "ﱡ",      monocle }, /* default is [M] */
 };
 
+#define STATUSBAR "dwmblocks"
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -59,6 +69,7 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 
 /* commands */
 static const char *rofi[]      = {"rofi", "-show", "drun"};
@@ -85,6 +96,7 @@ ResourcePref resources[] = {
 		{ "normfgcolor",        STRING,  &normfgcolor },
 		{ "selbgcolor",         STRING,  &selbgcolor },
 		{ "selbordercolor",     STRING,  &selbordercolor },
+		{ "distroiconcolor",    STRING,  &distroiconcolor },
 		{ "selfgcolor",         STRING,  &selfgcolor },
 		{ "borderpx",          	INTEGER, &borderpx },
 		{ "snap",          		INTEGER, &snap },
@@ -93,6 +105,8 @@ ResourcePref resources[] = {
 		{ "nmaster",          	INTEGER, &nmaster },
 		{ "resizehints",       	INTEGER, &resizehints },
 		{ "mfact",      	 	FLOAT,   &mfact },
+		{ "vertpad",      	 	INTEGER, &vertpad },
+		{ "sidepad",      	 	INTEGER, &sidepad },
 };
 
 static const Key keys[] = {
@@ -102,7 +116,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_l,      spawn,          {.v = lock } }, 
     { MODKEY,                       XK_f,      spawn,          {.v = filemgr } }, 
-    { MODKEY,                       XK_n,      spawn,          {.v = notes } }, { MODKEY,                       XK_b,      togglebar,      {0} },
+    { MODKEY,                       XK_n,      spawn,          {.v = notes } },
+    { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = snip}}, 
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -169,4 +184,3 @@ static Signal signals[] = {
 	{ 1,            reload_xresources,      {.v = 0} },
 };
 
-#define STATUSBAR "dwmblocks"
