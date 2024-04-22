@@ -858,7 +858,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 		isCode = 0;
 	text = p;
 
-	w +=  5 * sp; /* 1px padding on both sides */
+	w +=  horizstatuspad * sp; /* 1px padding on both sides */
 	ret = x = m->ww - w;
 
 	drw_setscheme(drw, scheme[LENGTH(colors)]);
