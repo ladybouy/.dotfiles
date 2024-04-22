@@ -5,6 +5,11 @@ source $HOME/.themes/statusbar_colors.sh
 BG_COLOR="^b"$CYAN_DARK"^"
 TEXT_COLOR="^c"$BLACK_DARK"^"
 ARROW_COLOR="^c"$CYAN_DARK"^"
+POWERLINE_COLOR="^c"$RED_DARK"^"
+POWERLINE_COLOR_2="^c"$RED_LIGHT"^"
+LEFT_ARROW='\ue0b2'
+LEFT_ROUND='\ue0b6'
+RIGHT_ROUND='\ue0b4'
 
 echo -e $(pacmd list-sinks |
     awk -v bg_color="$BG_COLOR" -v text_color="$TEXT_COLOR" -v arrow_color=$ARROW_COLOR '
