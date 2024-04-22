@@ -33,7 +33,7 @@ echo -e $(wpctl get-volume @DEFAULT_AUDIO_SINK@ |
         END {
             printf powerline_color
             printf left_round
-            printf "%s", h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
+            printf "%s",h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
             printf volume"%"
             printf bar_bg_color 
             printf powerline_color_2

@@ -21,13 +21,13 @@ ARROW='\ue0b2'
 
 if [[ $(cat /sys/class/net/w*/operstate) == "down" ]] && \
     [[ $(cat /sys/class/net/enp6s0/operstate) == "up" ]]; then
-    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$ETHERNET_UP$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR $ICON_COLOR$ETHERNET_UP $BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 elif [[ $(cat /sys/class/net/w*/operstate) == "up" ]] && \
     [[ $(cat /sys/class/net/enp35s0/operstate) == "up" ]]; then
-    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$ETHERNET_UP$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR $ICON_COLOR$ETHERNET_UP $BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 elif [[ $(cat /sys/class/net/w*/operstate) == "up" ]] && \
     [[ $(cat /sys/class/net/enp6s0/operstate) == "down" ]]; then
     echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR $ICON_COLOR$WIFI_UP $TEXT_COLOR $(awk '/^\s*w/ {print int($3 * 100 /70) "%"}' /proc/net/wireless) $BAR_BG_COLOR$POWERLINE_COLOR_2$RIGHT_ROUND
 else 
-    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR $ICON_COLOR$ETHERNET_DOWN$WIFI_DOWN$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR $ICON_COLOR$ETHERNET_DOWN$WIFI_DOWN $BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 fi
