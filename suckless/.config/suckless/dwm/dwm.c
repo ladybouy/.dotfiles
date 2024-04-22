@@ -875,7 +875,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 
 			text[i] = '\0';
 			w = TEXTW(text) - lrpad;
-			drw_text(drw, x, vertstatuspad / 2, w, bh - vertstatuspad, 0, text, 0);
+			drw_text(drw, x, 1 + vertstatuspad / 2, w, bh - vertstatuspad-2, 0, text, 0);
 
 			x += w;
 
