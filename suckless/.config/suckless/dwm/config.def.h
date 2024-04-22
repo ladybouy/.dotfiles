@@ -11,9 +11,9 @@ static int topbar                   = 1;        /* 0 means bottom bar */
 static int vertpad                  = 8;       /* vertical padding of bar */
 static int sidepad                  = 8;       /* horizontal padding of bar */
 static int vertstatuspad            = 10;       /* vertical padding of status bar */
-static int horizstatuspad           = 3;        /* right hand horizontal padding of status bar */
+static int horizstatuspad           = 4;        /* right hand horizontal padding of status bar */
 static const char distroicon[]      = "";
-static char font[]                  = "FiraCode Nerd Font Mono:style=Bold:size=10";
+static char font[]                  = "FiraCode Nerd Font Mono:style=Bold:size=9";
 static char dmenufont[]             = "FiraCode Nerd Font Mono:style=Regular:size=10";
 static const char *fonts[]          = { font };
 static char normbgcolor[]           = "#1d2021";
