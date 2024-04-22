@@ -2,9 +2,16 @@
 
 source $HOME/.themes/statusbar_colors.sh
 
+BAR_BG_COLOR="^b"$DARK_BACKGROUND"^"
 BG_COLOR="^b"$RED_LIGHT"^"
-TEXT_COLOR="^c"$BLACK_DARK"^"
-ARROW_COLOR="^c"$RED_LIGHT"^"
+TEXT_COLOR="^c"$DARK_BACKGROUND"^"
+ICON_BG_COLOR="^b"$RED_DARK"^"
+ICON_COLOR="^c"$DARK_BACKGROUND"^"
+POWERLINE_COLOR="^c"$RED_DARK"^"
+POWERLINE_COLOR_2="^c"$RED_LIGHT"^"
+LEFT_ARROW='\ue0b2'
+LEFT_ROUND='\ue0b6'
+RIGHT_ROUND='\ue0b4'
 
 function battery_remaining()
 {
@@ -50,9 +57,9 @@ for battery in /sys/class/power_supply/BAT?*; do
 
     if [[ "$(cat "$battery/status" 2>&1)" == "Discharging" ]]; then
         time_remaining=$(acpi | awk '{print $5}')
-        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$status$capacity%  $(battery_remaining)
+        echo -e  $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$capacity%  $(battery_remaining)$BAR_BG_COLOR$POWERLINE_COLOR_2$RIGHT_ROUND
     else
-        echo -e $ARROW_COLOR'\ue0b2'$BG_COLOR $TEXT_COLOR$status$TEXT_COLOR$capacity%
+        echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$TEXT_COLOR$capacity%$BAR_BG_COLOR$POWERLINE_COLOR_2$RIGHT_ROUND 
     fi
 
     # Prints the info

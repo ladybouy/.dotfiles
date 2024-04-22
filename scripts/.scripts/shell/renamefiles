@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+    echo "First argument is empty, try again";
+    exit 1 
+elif [[ -z "$2" ]]; then
+    echo "Second argument is empty, try again";
+    exit 1
+fi
+
+for FILE in *; do
+    NEW_FILE=$(echo ${FILE} | sed -e "s/$1/$2/g")
+    mv "${FILE}" "${NEW_FILE}"
+done
