@@ -858,7 +858,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 		isCode = 0;
 	text = p;
 
-	w +=  2 * sp; /* 1px padding on both sides */
+	w +=  5 * sp; /* 1px padding on both sides */
 	ret = x = m->ww - w;
 
 	drw_setscheme(drw, scheme[LENGTH(colors)]);
@@ -905,7 +905,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 					while (text[++i] != ',');
 					int rh = atoi(text + ++i);
 
-					drw_rect(drw, rx + x, ry + vertstatuspad/2, rw, MIN(rh, bh - vertstatuspad), 1, 0);
+					drw_rect(drw, rx + x, ry + vertstatuspad / 2, rw, MIN(rh, bh - vertstatuspad), 1, 0);
 				} else if (text[i] == 'f') {
 					x += atoi(text + ++i);
 				}

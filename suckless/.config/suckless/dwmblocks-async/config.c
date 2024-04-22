@@ -7,7 +7,6 @@
 Block blocks[] = {
     {"mpdstatus.sh",       1,      2 },
     {"spotifystatus.sh",   1,      1 },
-    {"wxstatusbar.sh",     60,     3 },
     {"internet.sh",        1,      4 },
     {"volume-pipewire.sh", 1,      5 },
     {"calendar.sh",        60,     6 },

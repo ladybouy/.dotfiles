@@ -107,6 +107,7 @@ ResourcePref resources[] = {
 		{ "mfact",      	 	FLOAT,   &mfact },
 		{ "vertpad",      	 	INTEGER, &vertpad },
 		{ "sidepad",      	 	INTEGER, &sidepad },
+		{ "vertstatuspad",  	INTEGER, &vertstatuspad },
 };
 
 static const Key keys[] = {
