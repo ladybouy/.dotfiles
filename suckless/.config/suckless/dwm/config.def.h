@@ -8,8 +8,8 @@ static unsigned int borderpx        = 1;        /* border pixel of windows */
 static unsigned int snap            = 32;       /* snap pixel */
 static int showbar                  = 1;        /* 0 means no bar */
 static int topbar                   = 1;        /* 0 means bottom bar */
-static int vertpad                  = 8;       /* vertical padding of bar */
-static int sidepad                  = 8;       /* horizontal padding of bar */
+static int vertpad                  = 5;       /* vertical padding of bar */
+static int sidepad                  = 5;       /* horizontal padding of bar */
 static int vertstatuspad            = 10;       /* vertical padding of status bar */
 static int horizstatuspad           = 4;        /* right hand horizontal padding of status bar */
 static const char distroicon[]      = "";
@@ -163,7 +163,6 @@ static const Button buttons[] = {
 	{ ClkRootWin,           0,              Button3,        spawn,          {.v = xmenu} },
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        layoutmenu,     {0} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button1,        sigstatusbar,   {.i = 1} },
 	{ ClkStatusText,        0,              Button2,        sigstatusbar,   {.i = 2} },
 	{ ClkStatusText,        0,              Button3,        sigstatusbar,   {.i = 3} },
