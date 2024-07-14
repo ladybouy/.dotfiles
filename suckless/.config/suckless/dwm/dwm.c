@@ -516,7 +516,7 @@ buttonpress(XEvent *e)
 			click = ClkLtSymbol;
 		else if (ev->x > selmon->ww - statusw) {
 			x = selmon->ww - statusw;
-
+            click = ClkStatusText;
 			char *text, *s, ch;
 			statussig = 0;
 			for (text = s = stext; *s && x <= ev->x; s++) {
