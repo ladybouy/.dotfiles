@@ -19,6 +19,16 @@ LEFT_ARROW='\ue0b2'
 MPC_FORMAT=$(mpc --format [[%artist%" "-" "]%title%] | head -n 1)
 MPC_STATUS=$(mpc --format %title% | awk 'NR==2 {print $1}')
 
+
+mpc_up()
+{
+    while : ; do
+        mpc idle >/dev/null && kill -45 "$(pidof dwmblocks)" || break
+    done
+}
+
+pidof -x mpc_up >/dev/null 2>&1 || mpd_up >/dev/null 2>&1 &
+
 if [[ "$MPC_STATUS" == "[playing]" ]]; then
     echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$MUSIC_ICON $PLAY_ICON $BG_COLOR" $MPC_FORMAT"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 elif [[ "$MPC_STATUS" == "[paused]" ]]; then

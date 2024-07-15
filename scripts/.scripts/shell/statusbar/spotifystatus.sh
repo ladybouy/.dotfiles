@@ -43,9 +43,11 @@ spotify_status()
 }
 
 case $BLOCK_BUTTON in
-    1) playerctl --player=spotify previous;;
+    1) spotify_toggle;;
     2) spotify_toggle;;
-    3) playerctl --player=spotify next;;
+    3) spotify_toggle;;
+    4) playerctl --player=spotify next;;
+    5) playerctl --player=spotify previous;;
 esac
 
 spotify_status

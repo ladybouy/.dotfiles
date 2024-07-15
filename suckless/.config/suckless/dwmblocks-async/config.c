@@ -5,13 +5,12 @@
 
 // clang-format off
 Block blocks[] = {
-    {"mpdstatus.sh",       1,      2 },
-    {"spotifystatus.sh",   1,      1 },
+    {"mpdstatus.sh",       1,      6 }, // There is a bug with this script
+    {"spotifystatus.sh",   1,      5 },
     {"internet.sh",        1,      4 },
-    {"volume-pipewire.sh", 1,      5 },
-    {"calendar.sh",        60,     6 },
-    {"time.sh",            1,      7 },
-    {"echo ' '",          1,      8 },
+    {"volume-pipewire.sh", 1,      3 },
+    {"calendar.sh",        60,     2 },
+    {"time.sh",            1,      1 },
 };
 // clang-format on
 
