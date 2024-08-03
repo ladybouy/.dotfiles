@@ -11,6 +11,7 @@ dmenu.normfgcolor:      #d3c6aa
 dmenu.normbgcolor:      #232a2e 
 dmenu.selfgcolor:       #232a2e
 dmenu.selbgcolor:       #d3c6aa 
+dwm.distroiconcolor:    #7fbbb3
 
 #define FOREGROUND      #d3c6aa 
 #define BACKGROUND      #232a2e

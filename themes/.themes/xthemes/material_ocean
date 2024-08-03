@@ -15,6 +15,7 @@ dwm.normbordercolor:  #FF4151
 dwm.selbgcolor:       #FF4151
 dwm.selfgcolor:       #E5E9F0
 dwm.selbordercolor:   #FF4151
+dwm.distroiconcolor:  #81A1C1
 
 #define FOREGROUND    #E5E9F0
 #define BACKGROUND    #0F111A
