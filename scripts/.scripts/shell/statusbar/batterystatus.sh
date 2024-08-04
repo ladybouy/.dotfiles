@@ -57,9 +57,9 @@ for battery in /sys/class/power_supply/BAT?*; do
 
     if [[ "$(cat "$battery/status" 2>&1)" == "Discharging" ]]; then
         time_remaining=$(acpi | awk '{print $5}')
-        echo -e  $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$capacity%  $(battery_remaining)$BAR_BG_COLOR$POWERLINE_COLOR_2$RIGHT_ROUND
+        echo -e  $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$capacity%  $(battery_remaining)$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
     else
-        echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$TEXT_COLOR$capacity%$BAR_BG_COLOR$POWERLINE_COLOR_2$RIGHT_ROUND 
+        echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$status$TEXT_COLOR$capacity%$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND 
     fi
 
     # Prints the info
