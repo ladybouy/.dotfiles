@@ -19,5 +19,5 @@ RIGHT_ROUND='\ue0b4'
 echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$ICON $BG_COLOR$TEXT_COLOR"$(date '+%d %B %Y')"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 
 case $BLOCK_BUTTON in
-    1) st -e calcurse;;
+    2) st -e calcurse;;
 esac

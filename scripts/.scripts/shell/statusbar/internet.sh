@@ -31,3 +31,6 @@ elif [[ $(cat /sys/class/net/w*/operstate) == "up" ]] && \
 else 
     echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$ICON_COLOR$ETHERNET_DOWN$WIFI_DOWN $BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
 fi
+
+case $BLOCK_BUTTON in
+esac
