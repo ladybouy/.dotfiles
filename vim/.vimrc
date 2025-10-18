@@ -85,6 +85,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tomasiser/vim-code-dark'
 	Plug 'ap/vim-css-color'
 	Plug 'JuliaEditorSupport/julia-vim'
+    Plug 'catppuccin/nvim'
 call plug#end()
 
 "------- Allows termguicolors

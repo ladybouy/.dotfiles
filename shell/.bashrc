@@ -31,6 +31,9 @@ export LESS_TERMCAP_me=$'\e[0m'             # reset bold/blink
 export LESS_TERMCAP_se=$'\e[0m'             # reset reverse text
 export LESS_TERMCAP_ue=$'\e[0m'             # reset underline
 
+source /opt/intel/oneapi/setvars.sh
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/lady/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

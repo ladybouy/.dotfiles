@@ -24,33 +24,28 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# start some nice programs
 
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
+# This line try to import /etc/xprofile if it exists
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
 #Setting environment variable for QT5
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-# Compositor
-picom --experimental-backends -f &
 
 # Key Binds
 xbindkeys
 
 # DWM Status
-#dwmstatus 2>&1 /dev/null &
 exec dwmblocks &
+
+# Compositor
+picom  &
 
 # Wallpaper
 nitrogen --restore &
 
 # Session Lock
-xidlehook --not-when-audio --not-when-fullscreen --timer 900 'slock' '' &
+xidlehook --not-when-audio --not-when-fullscreen --timer 600 'slock' '' &
 
 xhost +
 
@@ -61,3 +56,5 @@ done
 
 # Execute DWM
 exec dwm
+
+exec dunst

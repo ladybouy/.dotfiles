@@ -1,6 +1,5 @@
 
 local fn = vim.fn
-
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -61,17 +60,25 @@ return packer.startup(function(use)
     use "vim-airline/vim-airline-themes"
     use "svrana/neosolarized.nvim"
     use "sainnhe/everforest"
-
-    -- Completion plugins
-    use "hrsh7th/cmp-buffer"            -- Buffer completions
-    use "hrsh7th/cmp-path"              -- Path Completions
-    use "hrsh7th/cmp-cmdline"           -- Commandline completions
-    use "saadparwaiz1/cmp_luasnip"      -- Snippet completions
-    use "hrsh7th/cmp-nvim-lua"
+    use "kaicataldo/material.vim"
 
     -- Snippets
     use "L3MON4D3/LuaSnip"              -- Snippet engine
     use "rafamadriz/friendly-snippets"  -- Collections of snippets
+
+    -- LSP
+    use "mason-org/mason.nvim"
+    use "neovim/nvim-lspconfig"
+
+    require("mason").setup({
+        ui = {
+            icons = {
+                package_installed = "✓",
+                package_pending = "➜",
+                package_uninstalled = "✗"
+            }
+        }
+    })
 
     -- Functionality
     use "tpope/vim-surround"
@@ -86,31 +93,6 @@ return packer.startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-
-    --  Langauge server Protocol
-   use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {                                      -- Optional
-          'williamboman/mason.nvim',
-          run = function()
-            pcall(vim.cmd, 'MasonUpdate')
-          end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-      }
-    }
-
-    use "MunifTanjim/prettier.nvim"
-    use "glepnir/lspsaga.nvim"
 
     -- Treesitter
     use {

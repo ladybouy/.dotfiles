@@ -72,3 +72,4 @@ vim.cmd[[let g:floaterm_height = 20]]
 
 --nvim-tree toggle
 keymap("n","<leader>e", ":NvimTreeToggle<cr>", opts)
+

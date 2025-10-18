@@ -42,10 +42,48 @@ echo -e $(wpctl get-volume @DEFAULT_AUDIO_SINK@ |
         '
 )
 
+function notify()
+{
+    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | tr -dc '0-9' | sed 's/^0\{1,2\}//')
+
+    case $1 in
+        volume_up)
+            notify-send -r 9993  "  ${volume}%" -h int:value:"$volume"  -t 2000
+            ;;
+        volume_down)
+            notify-send -r 9993  "  ${volume}%" -h int:value:"$volume"  -t 2000
+            ;;
+        toggle)
+            mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $NF}')
+            if [ $mute == "yes" ]; then
+                icon=婢
+                status="Muted"
+            else
+                icon=
+                status=$volume%
+            fi
+            notify-send -t 2000 "$icon  $status"
+            ;;
+    esac
+}
+
+function audio_control()
+{
+    case $1 in
+        volume_up)
+            pactl set-sink-volume @DEFAULT_SINK@ +1% ;;
+        volume_down)
+            pactl set-sink-volume @DEFAULT_SINK@ -1% ;;
+        toggle)
+            pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+    esac
+    notify $1
+}
+
 case $BLOCK_BUTTON in
-    1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+    1) audio_control toggle ;;
     2) pavucontrol ;;
     3) st -e alsamixer ;;
-    4) pactl set-sink-volume @DEFAULT_SINK@ +1% ;;
-    5) pactl set-sink-volume @DEFAULT_SINK@ -1% ;;
+    4) audio_control volume_up ;;
+    5) audio_control volume_down ;;
 esac

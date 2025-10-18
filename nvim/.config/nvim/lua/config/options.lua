@@ -31,3 +31,5 @@ end
 
 vim.opt.path:append "**"
 vim.opt.iskeyword:append "-"
+
+vim.cmd[[let g:mkdp_browser = 'google-chrome-stable']]
