@@ -3,3 +3,4 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export TERMINAL='st'
 export BROWSER='firefox'
+export BOKEH_BROWSER=/usr/bin/chromium-browser

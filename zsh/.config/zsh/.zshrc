@@ -2,8 +2,7 @@
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:$HOME/.local/bin
-
+export PATH="$PATH:$HOME/.scripts/bin:$HOME/.scripts/shell:$HOME/.scripts/python:$HOME/.local/bin"
 # General settings
 unsetopt nomatch
 
@@ -13,6 +12,7 @@ source $HOME/.themes/statusbar_colors.sh
 #Key Bindings
 zle -N fzf_open_file
 zle -N fzf_cd
+bindkey -e 
 bindkey '^[f' fzf_open_file
 
 # Completions

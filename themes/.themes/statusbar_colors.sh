@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME=gruvbox-dark
+THEME=gruvbox-material-dark
 ICON_COLOR=""
 TEXT_COLOR="^d^"
 case "$THEME" in
