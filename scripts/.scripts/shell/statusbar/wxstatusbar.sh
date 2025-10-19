@@ -12,7 +12,7 @@ POWERLINE_COLOR="^c"$BLUE_DARK"^"
 LEFT_ROUND='\ue0b6'
 RIGHT_ROUND='\ue0b4'
 
-echo -e $(curl -s wttr.in/$LOCATION?format=1 | awk -v arrow_color=$ARROW_COLOR -v powerline_color=$POWERLINE_COLOR -v bar_bg_color=$BAR_BG_COLOR -v bg_color=$BG_COLOR -v icon_color=$ICON_COLOR -v text_color=$TEXT_COLOR -v left_round=$LEFT_ROUND -v right_round=$RIGHT_ROUND '{ print powerline_color left_round bg_color text_color $1" " $2 bar_bg_color powerline_color right_round}')
+echo -e $(curl -s wttr.in/North+Hollywood?format=1 | awk -v arrow_color=$ARROW_COLOR -v powerline_color=$POWERLINE_COLOR -v bar_bg_color=$BAR_BG_COLOR -v bg_color=$BG_COLOR -v icon_color=$ICON_COLOR -v text_color=$TEXT_COLOR -v left_round=$LEFT_ROUND -v right_round=$RIGHT_ROUND '{ print powerline_color left_round bg_color text_color $1" " $2 bar_bg_color powerline_color right_round}')
 
 case $BLOCK_BUTTON in
 esac

@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+function get_album_art () {
+    url=$(playerctl -p "$1" -f "{{mpris:artUrl}}" metadata)
+    if [[ $url == "file://"* ]]; then
+        album_art="${url/file:\/\//}"
+    elif [[ $url == "http://"* ]]; then
+        # Identify filename from URL
+        filename="$echo $url | sed "s/.*\///")"
+        # Download file to /tmp if it doesn't exist
+        if [ ! -f "/tmp/$filename" ]; then
+            wget -O "/tmp/$filename" "$url"
+        fi
+        album_art="/tmp/$filename"
+    elif [[ $url == "https://"* ]]; then
+        # Identify filename from URL
+        filename="$(echo $url | sed "s/.*\///")"
+        
+        # Download file to /tmp if it doesn't exist
+        if [ ! -f "/tmp/$filename" ]; then
+            wget -O "/tmp/$filename" "$url"
+        fi
+        album_art="/tmp/$filename"
+    else
+        album_art=""
+    fi
+}
+
+function show_music_notification () {
+    song_title=$(playerctl -p "$1" -f "{{title}}" metadata)
+    song_artist=$(playerctl -p "$1" -f "{{artist}}" metadata)
+    song_album=$(playerctl -p "$1" -f "{{album}}" metadata)
+
+    get_album_art "$1"
+
+    notify-send -t 5000  -h string:x-dunst-stack-tag:music_notif -i "$album_art" "$song_title" "$song_artist - $song_album"
+}
+
+show_music_notification $1

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Dependancy music_info
+
 source $HOME/.themes/statusbar_colors.sh
 
 ICON=""
@@ -42,12 +44,26 @@ spotify_status()
     fi
 }
 
+spotify_command()
+{
+    case $1 in
+        next)
+            playerctl --player=spotify next
+            ;;
+        previous)
+            playerctl --player=spotify previous
+            ;;
+    esac
+
+    music_info spotify
+}
+
 case $BLOCK_BUTTON in
     1) spotify_toggle;;
     2) spotify_toggle;;
     3) spotify_toggle;;
-    4) playerctl --player=spotify next;;
-    5) playerctl --player=spotify previous;;
+    4) spotify_command next ;;
+    5) spotify_command previous ;;
 esac
 
 spotify_status
