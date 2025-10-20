@@ -16,28 +16,76 @@ LEFT_ROUND='\ue0b6'
 RIGHT_ROUND='\ue0b4'
 LEFT_ARROW='\ue0b2'
 
-MPC_FORMAT=$(mpc --format [[%artist%" "-" "]%title%] | head -n 1)
-MPC_STATUS=$(mpc --format %title% | awk 'NR==2 {print $1}')
 
+# MPD_FORMAT=$(mpd --format [[%artist%" "-" "]%title%] | head -n 1)
+# MPD_STATUS=$(mpd --format %title% | awk 'NR==2 {print $1}')
 
-mpc_up()
+mpd_up()
 {
     while : ; do
-        mpc idle >/dev/null && kill -45 "$(pidof dwmblocks)" || break
+        mpd idle >/dev/null && kill -45 "$(pidof dwmblocks)" || break
     done
 }
 
-pidof -x mpc_up >/dev/null 2>&1 || mpd_up >/dev/null 2>&1 &
+pidof -x mpd_up >/dev/null 2>&1 || mpd_up >/dev/null 2>&1 &
 
-if [[ "$MPC_STATUS" == "[playing]" ]]; then
-    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$MUSIC_ICON $PLAY_ICON $BG_COLOR" $MPC_FORMAT"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
-elif [[ "$MPC_STATUS" == "[paused]" ]]; then
-    echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$MUSIC_ICON $PAUSE_ICON $BG_COLOR" $MPC_FORMAT"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
-else 
-    exit
-fi
+# if [[ "$MPD_STATUS" == "[playing]" ]]; then
+#     echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$MUSIC_ICON $PLAY_ICON $BG_COLOR" $MPD_FORMAT"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+# elif [[ "$MPD_STATUS" == "[paused]" ]]; then
+#     echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$MUSIC_ICON $PAUSE_ICON $BG_COLOR" $MPD_FORMAT"$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+# else 
+#     exit
+# fi
+ 
+MPD_FORMAT=$(playerctl --player=mpd metadata --format "{{artist}} - {{title}}" 2>/dev/null)
+MPD_STATUS=$(playerctl --player=mpd status --format "{{ uc(status) }}" 2>/dev/null) 
+ 
+
+mpd_toggle() 
+{
+    if [[ "$MPD_STATUS" == "PLAYING" ]]; then
+        playerctl --player=mpd pause
+    elif [[ "$MPD_STATUS" == "PAUSED" ]]; then
+        playerctl --player=mpd play 
+    else
+        exit
+    fi
+}
+
+
+mpd_status()
+{
+    if [[ "$MPD_STATUS" == "PLAYING" ]]; then
+        echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$ICON $PLAY_ICON  $BG_COLOR$MPD_FORMAT$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+    elif [[ "$MPD_STATUS" == "PAUSED" ]]; then
+        echo -e $POWERLINE_COLOR$LEFT_ROUND$ICON_BG_COLOR$TEXT_COLOR$ICON $PAUSE_ICON  $BG_COLOR$MPD_FORMAT$BAR_BG_COLOR$POWERLINE_COLOR$RIGHT_ROUND
+    else 
+        exit
+    fi
+}
+
+mpd_command()
+{
+    case $1 in
+        next)
+            playerctl --player=mpd next
+            ;;
+        previous)
+            playerctl --player=mpd previous
+            ;;
+    esac
+
+#    music_info mpd
+}
+
 
 case $BLOCK_BUTTON in
-    1) mpc toggle ;;
-    3) st -e ncmpcpp ;;
+    1) mpd_toggle ;;
+    2) mpd_toggle ;;
+    3) st -e ncmpdpp ;;
+    4) mpd_command next ;;
+    5) mpd_command previous ;;
+
 esac
+
+mpd_status
