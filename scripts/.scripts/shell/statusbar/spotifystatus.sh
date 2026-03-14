@@ -54,8 +54,6 @@ spotify_command()
             playerctl --player=spotify previous
             ;;
     esac
-
-    music_info spotify
 }
 
 case $BLOCK_BUTTON in
