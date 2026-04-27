@@ -16,22 +16,22 @@ if [ -z "$choice" ]; then
 fi
 
 for theme in "${THEMES[@]}";
-do
-    if [ "$theme" != "$choice" ]; then
-        macro=${theme//-/_}
-        macro=${macro^^}
-        sed  -i "s/#define $macro [0-1]/#define $macro 0/g" "$HOME"/.Xresources
-    else
-        macro=${choice//-/_}
-        macro=${macro^^}
-        sed -i "s/#define $macro [0-1]/#define $macro 1/g" "$HOME"/.Xresources
-        sed -i "s/gtk-theme-name=.*[a-zA-Z]/gtk-theme-name=$theme/g" "$HOME"/.config/gtk-3.0/settings.ini
-        sed -i "s/gtk-icon-theme-name=.*[a-zA-Z]/gtk-icon-theme-name=$theme/g" "$HOME"/.config/gtk-3.0/settings.ini
-        sed -i "s/color_scheme_path=.*/color_scheme_path=\$HOME\/\.config\/qt5ct\/colors\/$theme\.conf/g" "$HOME"/.config/qt5ct/qt5ct.conf
-        sed -i "s/icon_theme=.*/icon_theme=$theme-gtk/g" "$HOME"/.config/qt5ct/qt5ct.conf
-        sed -i "s/THEME=.*/THEME=$theme/g" "$HOME"/.themes/statusbar_colors.sh
-        sed -i "s/@theme.*/@theme \"$theme\"/g" "$HOME"/.config/rofi/config.rasi
-    fi
+ do
+     if [ "$theme" != "$choice" ]; then
+         macro=${theme//-/_}
+         macro=${macro^^}
+         sed  -i "s/#define $macro [0-1]/#define $macro 0/g" "$HOME"/.Xresources &>/dev/null
+     else
+         macro=${choice//-/_}
+         macro=${macro^^}
+         sed -i "s/#define $macro [0-1]/#define $macro 1/g" "$HOME"/.Xresources  &>/dev/null
+         sed -i "s/gtk-theme-name=.*[a-zA-Z]/gtk-theme-name=$theme/g" "$HOME"/.config/gtk-3.0/settings.ini &>/dev/null
+         sed -i "s/gtk-icon-theme-name=.*[a-zA-Z]/gtk-icon-theme-name=$theme/g" "$HOME"/.config/gtk-3.0/settings.ini &>/dev/null
+         sed -i "s/color_scheme_path=.*/color_scheme_path=\$HOME\/\.config\/qt5ct\/colors\/$theme\.conf/g" "$HOME"/.config/qt5ct/qt5ct.conf &>/dev/null
+         sed -i "s/icon_theme=.*/icon_theme=$theme-gtk/g" "$HOME"/.config/qt5ct/qt5ct.conf  &>/dev/null
+         sed -i "s/THEME=.*/THEME=$theme/g" "$HOME"/.themes/statusbar_colors.sh &>/dev/null
+         sed -i "s/@theme.*/@theme \"$theme\"/g" "$HOME"/.config/rofi/config.rasi &>/dev/null
+     fi
 done
 
-xrdb merge "$HOME"/.Xresources && kill -USR1 $(pidof st) && xsetroot -name "fsignal:1" && kill -10 $(pidof dwmblocks)
+xrdb merge "$HOME"/.Xresources && kill -USR1 $(pidof st) && xsetroot -name "fsignal:1" && kill -10 $(pidof dwmblocks) &>/dev/null
