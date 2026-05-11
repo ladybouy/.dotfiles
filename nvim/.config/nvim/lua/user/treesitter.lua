@@ -9,7 +9,7 @@ configs.setup {
     ignore_install = { "" },
     highlight = {
         enable = true,
-        disable = { "" },
+        disable = { "latex" },
         additional_vim_regex_highlighting = true;
     },
     indent = { enable = false },

@@ -3,9 +3,7 @@
 declare -a THEMES=(
 "gruvbox-material-dark"
 "gruvbox-dark"
-"gruvbox-light"
 "catppuccin-mocha"
-"everforest"
 "material-ocean"
 )
 

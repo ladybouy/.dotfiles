@@ -51,13 +51,15 @@ xbindkeys
 exec dwmblocks &
 
 # Compositor 
-picom --experimental-backends -f & 
+picom & 
 
 # Wallpaper
 nitrogen --restore & 
 
 # Session Lock
 xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'slock' '' &
+
+music_notify &
 
 xhost +
 
@@ -68,3 +70,5 @@ done
 
 # Execute DWM
 exec dwm 
+
+exec dunst

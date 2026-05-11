@@ -13,6 +13,7 @@ source $HOME/.themes/statusbar_colors.sh
 #Key Bindings
 zle -N fzf_open_file
 zle -N fzf_cd
+bindkey -e
 bindkey '^[f' fzf_open_file
 
 # Completions
