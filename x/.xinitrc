@@ -48,6 +48,8 @@ nitrogen --restore &
 # Session Lock
 xidlehook --not-when-audio --not-when-fullscreen --timer 600 'slock' '' &
 
+music_notify & 
+
 xhost +
 
 # Loop for restarting dwm 
