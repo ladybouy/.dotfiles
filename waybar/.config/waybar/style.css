@@ -1,13 +1,4 @@
-/* Gruvbox Material Dark */
-@define-color highlight rgba(226,212,186,1);
-@define-color black     rgba(29,32,33,1);
-@define-color red       rgba(234,105,98,1);
-@define-color green     rgba(169,182,101,1);
-@define-color yellow    rgba(216,166,87,1);
-@define-color blue      rgba(125,174,163,1);
-@define-color magenta   rgba(211,134,155,1);
-@define-color cyan      rgba(137,180,114,1);
-@define-color white     rgba(213,190,152,1);
+@import "Themes/grubox-theme.css";
 
 window#waybar {
     font-family: inherit;
@@ -27,7 +18,7 @@ window#waybar {
 
 #workspaces button.active {
     color: black;
-    background: @highlight;
+    background: @white;
     font-weight: 700;
 }
 
@@ -41,26 +32,26 @@ window#waybar {
     border-radius: 8px;
     padding: 5px 12px;
     margin: 5px 10px 5px 0px;
-    color: @black;
+    color: @black-dark;
     font-weight: 700;
 }
 
 #network {
-    background: @yellow;
+    background: @yellow-dark;
 }
 
 #pulseaudio {
-    background: @blue;
+    background: @blue-dark;
 }
 
 #tray {
-    background: @cyan;
+    background: @cyan-dark;
 }
 
 #clock {
-    background: @magenta;
+    background: @magenta-dark;
 }
 
 #custom-power {
-    background: @red;
+    background: @red-dark;
 }

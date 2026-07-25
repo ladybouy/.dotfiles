@@ -12,6 +12,13 @@
       </object>
     </child>
     <child>
+      <object class="GtkMenuItem" id="logoff">
+        <property name="label">Logoff</property>
+      </object>
+    </child>
+    <child>
+    </child>
+    <child>
       <object class="GtkMenuItem" id="shutdown">
         <property name="label">Shutdown</property>
       </object>
