@@ -15,7 +15,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
-    mode     = "3840x2160@144",
+    mode     = "3840x2160@143.99",
     position = "auto",
     scale    = "auto",
 })
@@ -43,7 +43,7 @@ local lockscreen  = "hyprlock"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & waytrogen --restore & music_notify")
+  hl.exec_cmd("waybar & waytrogen --restore & music_notify & hypridle")
 end)
 
 
