@@ -1,6 +1,6 @@
 
 
-vim.lsp.enable({'lua_ls', 'clangd','texlab', 'marksman'});
+vim.lsp.enable({'lua_ls', 'clangd', 'texlab', 'marksman'});
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)

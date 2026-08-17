@@ -15,9 +15,9 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
-    mode     = "3840x2160@143.99",
+    mode     = "3840x2160@120",
     position = "auto",
-    scale    = "auto",
+    scale    = "1",
 })
 
 
@@ -26,11 +26,12 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "thunar"
-local menu        = "rofi -show drun"
-local command     = "rofi -show run"
-local lockscreen  = "hyprlock"
+local terminal       = "kitty"
+local fileManager    = "thunar"
+local tuiFileManager = "kitty -e ranger"
+local menu           = "rofi -show drun"
+local command        = "rofi -show run"
+local lockScreen     = "hyprlock"
 
 
 -------------------
@@ -56,6 +57,8 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_QPA_PLATFORM", "wayland")
+hl.env("BROWSER","/usr/bin/google-chrome")
 
 
 -----------------------
@@ -98,7 +101,7 @@ hl.config({
         resize_on_border = false,
 
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-        allow_tearing = false,
+        allow_tearing = true,
 
         layout = "master",
     },
@@ -206,6 +209,7 @@ hl.config({
     misc = {
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
+        vrr = true
     },
 })
 
@@ -258,10 +262,11 @@ local closeWindowBind = hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close()
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(tuiFileManager))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(command))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lockscreen))
+hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd(lockScreen))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 --hl.bind(mainMod .. " + SHIFT + S", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -361,4 +366,9 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.window_rule({
+    match = { class = "^(steam_app_.*)$"},
+    idle_inhibit = "fullscreen"
 })

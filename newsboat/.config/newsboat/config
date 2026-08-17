@@ -11,7 +11,7 @@ bind-key   l    open
 bind-key   h    quit
 bind-key   U    show-urls
 
-browser firefox
+browser google-chrome-stable
 
 color background           white     black
 color listnormal           color4    black

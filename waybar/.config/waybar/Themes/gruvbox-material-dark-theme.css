@@ -1,5 +1,4 @@
 /* Gruvbox Material Dark */
-@define-color white         #e2d5ba;
 @define-color black-dark    #282828;
 @define-color black-light   #928374;
 @define-color red-dark      #ea6962;
@@ -12,5 +11,7 @@
 @define-color blue-light    #9dc2ba;
 @define-color magenta-dark  #d3869b;
 @define-color magenta-light #e1acbb;
-@define-color green-dark    #89b482;
-@define-color green-light   #a7c7a2;
+@define-color cyan-dark     #89b482;
+@define-color cyan-light    #a7c7a2;
+@define-color white-dark    #d5be89;
+@define-color white-light   #e2d5ba;

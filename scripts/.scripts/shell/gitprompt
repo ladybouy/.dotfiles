@@ -10,3 +10,5 @@ git_prompt() {
     
     [ -n "${branch}" ] && echo " (${branch})"
 }
+
+git_prompt

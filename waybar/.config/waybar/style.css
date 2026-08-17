@@ -1,4 +1,4 @@
-@import "Themes/grubox-theme.css";
+@import "Themes/gruvbox-material-dark-theme.css";
 
 window#waybar {
     font-family: inherit;
@@ -18,7 +18,7 @@ window#waybar {
 
 #workspaces button.active {
     color: black;
-    background: @white;
+    background: @white-light;
     font-weight: 700;
 }
 
