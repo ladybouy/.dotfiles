@@ -17,7 +17,7 @@ hl.monitor({
     output   = "",
     mode     = "2880x1920@120",
     position = "auto",
-    scale    = "1",
+    scale    = "1.20",
 })
 
 
@@ -43,8 +43,9 @@ local lockScreen     = "hyprlock"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("waybar & waytrogen --restore & music_notify & hypridle")
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("hyprpaper & waybar &music_notify & hypridle")
+  hl.exec_cmd("sleep 1 && waytrogen --restore")
 end)
 
 
@@ -54,12 +55,14 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "34")
+hl.env("HYPRCURSOR_SIZE", "34")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("BROWSER","/usr/bin/google-chrome")
-
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 
 -----------------------
 ----- PERMISSIONS -----
