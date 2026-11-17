@@ -3,7 +3,7 @@
 window#waybar {
     font-family: inherit;
     font-size: 17px;
-    border-radius: 10px;
+    border-radius: 0px;
     background: @black-dark;
     color: @theme_text_color;
 }

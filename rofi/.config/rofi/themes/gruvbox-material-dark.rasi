@@ -36,8 +36,8 @@ configuration {
 
 window {
   transparency: "real";
-  width: 600;
-  border: 2px;
+  width: 800;
+  border: 1px;
   border-color: @fg;
 }
 
