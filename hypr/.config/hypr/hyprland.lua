@@ -17,7 +17,9 @@ hl.monitor({
     output   = "",
     mode     = "2880x1920@120",
     position = "auto",
-    scale    = "1.20",
+    scale    = "1.2",
+    bitdepth = 10,
+    cm = "srgb",
 })
 
 
@@ -216,6 +218,16 @@ hl.config({
     },
 })
 
+
+------------------
+----  RENDER  ----
+------------------
+
+hl.config({
+    render = {
+        cm_auto_hdr = 0,
+    },
+})
 
 ---------------
 ---- INPUT ----
