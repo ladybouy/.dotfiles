@@ -24,6 +24,7 @@ window#waybar {
 
 
 #power-profiles-daemon,
+#custom-weather,
 #network,
 #pulseaudio,
 #clock,
@@ -34,6 +35,10 @@ window#waybar {
     margin: 5px 10px 5px 0px;
     color: @black-dark;
     font-weight: 700;
+}
+
+#custom-weather{
+    background: @blue-light;
 }
 
 #network {

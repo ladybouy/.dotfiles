@@ -18,6 +18,8 @@ hl.monitor({
     mode     = "3840x2160@120",
     position = "auto",
     scale    = "1",
+    bitdepth = 10,
+    cm = "srgb",
 })
 
 
